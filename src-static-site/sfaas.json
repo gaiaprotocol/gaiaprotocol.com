@@ -1,0 +1,112 @@
+{
+  "name": "Social-Fi-as-a-Service (SFaaS)",
+  "socialfis": [{
+    "name": "Krew",
+    "description": "",
+    "chain": "Kroma",
+    "keyname": "Key",
+    "url": "https://krew.social",
+    "x": "https://x.com/krew_social",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "Igloo",
+    "description": "",
+    "chain": "Avalanche",
+    "keyname": "Ice",
+    "url": "https://igloo.ax",
+    "x": "https://x.com/iglooax",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "Thunder Dome",
+    "description": "",
+    "chain": "Fantom",
+    "keyname": "Ticket",
+    "url": "https://thunderdome.so",
+    "x": "https://x.com/ThunderDomeSoFi",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "ninja.tech",
+    "description": "Make your dojo",
+    "chain": "Injective inEVM",
+    "keyname": "Shuriken",
+    "url": "https://ninja.tech",
+    "x": "https://x.com/NinjaTechSoFi",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "brc.space",
+    "description": "",
+    "chain": "Bitcoin",
+    "keyname": "",
+    "url": "https://brc.space",
+    "x": "https://x.com/brc_space",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "bit2.social",
+    "description": "",
+    "chain": "Bitcoin Layer 2",
+    "keyname": "Key",
+    "url": "https://bit2.social",
+    "x": "https://x.com/bit2social",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "Crofam Space",
+    "description": "Make your fam",
+    "chain": "Cronos",
+    "keyname": "Ticket",
+    "url": "https://crofam.space",
+    "x": "https://x.com/crofamspace",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "polar.tech",
+    "description": "",
+    "chain": "Berachain",
+    "keyname": "Galss Coke Bottle",
+    "url": "https://polar.tech",
+    "x": "https://x.com/PolarTechSoFi",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "nad.zone",
+    "description": "",
+    "chain": "Monad",
+    "keyname": "Key",
+    "url": "https://nad.zone",
+    "x": "https://x.com/nadzone",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "Milkyway",
+    "description": "",
+    "chain": "Astar",
+    "keyname": "Stardust",
+    "url": "https://milkyway.so",
+    "x": "https://x.com/MilkywaySoFi",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "Tromsø",
+    "description": "",
+    "chain": "Aurora",
+    "keyname": "Shard of Light",
+    "url": "https://tromso.tech",
+    "x": "https://x.com/TromsoSoFi",
+    "discord": "",
+    "telegram": ""
+  }, {
+    "name": "Seiyan Space",
+    "description": "",
+    "chain": "Sei",
+    "keyname": "Ticket",
+    "url": "https://seiyan.space",
+    "x": "https://x.com/seiyanspace",
+    "discord": "",
+    "telegram": ""
+  }]
+}
