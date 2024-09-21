@@ -19,7 +19,7 @@ Deno.serve(async (req) => {
         body: home(),
         footer: footer(),
       }),
-      { status: 200 },
+      { status: 200, headers: { "Content-Type": "text/html" } },
     );
   } else {
     return new Response("Not Found", { status: 404 });
