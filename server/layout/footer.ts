@@ -1,3 +1,3 @@
 export function footer(): string {
-  return "footer";
+  return "Gaia Protocol 2022-2024";
 }

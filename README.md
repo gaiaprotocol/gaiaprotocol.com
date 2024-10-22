@@ -2,5 +2,5 @@
 
 ## Run entrypoint
 ```
-deno run --allow-net --allow-read server/entrypoint.ts
+deno run --allow-net --allow-read --watch server/entrypoint.ts
 ```
