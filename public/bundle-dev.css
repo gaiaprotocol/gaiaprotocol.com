@@ -966,7 +966,19 @@ li.chat-message-list-item > main {
 }
 .intro-view > section:not(.hero) > ul {
   display: flex;
-  padding-left: max(20px, calc((100vw - 1088px) / 2));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 max(20px, calc((100vw - 1088px) / 2));
+}
+.intro-view > section:not(.hero) > ul::before,
+.intro-view > section:not(.hero) > ul::after {
+  flex-shrink: 0;
+  content: '';
+  width: max(20px, calc((100vw - 1088px) / 2));
+}
+.intro-view > section:not(.hero) > ul > li {
+  margin-right: 13.5px;
+  scroll-snap-align: start;
 }
 .intro-view > section:not(.hero) > ul > li > a {
   display: block;

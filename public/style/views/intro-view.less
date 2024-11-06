@@ -63,10 +63,23 @@
     }
 
     >ul {
-      display     : flex;
-      padding-left: ~'max(20px, calc((100vw - 1088px) / 2))';
+      display         : flex;
+      overflow-x      : auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding  : 0 ~'max(20px, calc((100vw - 1088px) / 2))';
+
+      &::before,
+      &::after {
+        flex-shrink: 0;
+        content    : '';
+        width      : ~'max(20px, calc((100vw - 1088px) / 2))';
+      }
 
       >li {
+        margin-right: 13.5px;
+
+        scroll-snap-align: start;
+
         >a {
           display      : block;
           position     : relative;
