@@ -68,6 +68,10 @@
       scroll-snap-type: x mandatory;
       scroll-padding  : 0 ~'max(20px, calc((100vw - 1088px) / 2))';
 
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       &::before,
       &::after {
         flex-shrink: 0;

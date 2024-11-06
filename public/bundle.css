@@ -964,6 +964,9 @@ li.chat-message-list-item > main {
   scroll-snap-type: x mandatory;
   scroll-padding: 0 max(20px, calc((100vw - 1088px) / 2));
 }
+.intro-view > section:not(.hero) > ul::-webkit-scrollbar {
+  display: none;
+}
 .intro-view > section:not(.hero) > ul::before,
 .intro-view > section:not(.hero) > ul::after {
   flex-shrink: 0;
