@@ -4,7 +4,7 @@ import webpack from "webpack";
 
 const config: webpack.Configuration = {
   entry: {
-    "bundle": "./game/dev.ts",
+    "bundle": "./app/dev.ts",
     __less: "./public/style/main.less",
   },
   module: {

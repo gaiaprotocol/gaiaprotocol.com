@@ -19,7 +19,7 @@ const config: webpack.Configuration = {
     ],
   },
   entry: {
-    "bundle": "./game/prod.ts",
+    "bundle": "./app/prod.ts",
     __less: "./public/style/main.less",
   },
   module: {
