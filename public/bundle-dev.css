@@ -936,6 +936,11 @@ li.chat-message-list-item > main {
   font-size: 54px;
   text-align: center;
 }
+@container (width <= 520px) {
+  .intro-view > section.hero > .content > h1 {
+    font-size: 40px;
+  }
+}
 .intro-view > section.hero > .content > p {
   margin-top: 16px;
   text-align: center;
@@ -951,5 +956,12 @@ li.chat-message-list-item > main {
   margin: 0 auto;
   padding: 0 20px;
   font-size: 27px;
+  margin-bottom: 34px;
+}
+@container (width <= 520px) {
+  .intro-view > section:not(.hero) > h2 {
+    font-size: 23px;
+    margin-bottom: 13.5px;
+  }
 }
 

@@ -29,6 +29,10 @@
       >h1 {
         font-size : 54px;
         text-align: center;
+
+        @container (width <=@phone-width) {
+          font-size: 40px;
+        }
       }
 
       >p {
@@ -46,10 +50,16 @@
     margin-top: 108px;
 
     >h2 {
-      max-width: 1128px;
-      margin   : 0 auto;
-      padding  : 0 20px;
-      font-size: 27px;
+      max-width    : 1128px;
+      margin       : 0 auto;
+      padding      : 0 20px;
+      font-size    : 27px;
+      margin-bottom: 34px;
+
+      @container (width <=@phone-width) {
+        font-size    : 23px;
+        margin-bottom: 13.5px;
+      }
     }
   }
 }
