@@ -24,12 +24,12 @@ export function introView<T>(): T {
       ),
     ),
     el("section.protocol", el("h2", "Protocol")),
-    el("section.apps", el("h2", "Apps")),
+    el("section.platform", el("h2", "Platform")),
     el("section.games", el("h2", "Games")),
-    //el("section.metaverses", el("h2", "Metaverses")),
+    //el("section.metaverse", el("h2", "Metaverse")),
     el(
-      "section.assets",
-      el("h2", "Assets"),
+      "section.tokens",
+      el("h2", "Tokens"),
       el(
         "ul",
         el(
@@ -60,6 +60,6 @@ export function introView<T>(): T {
         ),
       ),
     ),
-    el("section.solutions", el("h2", "Solutions")),
+    el("section.technologies", el("h2", "Technologies")),
   );
 }
