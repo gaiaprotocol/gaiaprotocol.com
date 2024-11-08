@@ -907,6 +907,8 @@ li.chat-message-list-item > main {
 .intro-view > section.hero {
   position: relative;
   height: 600px;
+  background-size: cover;
+  background-position: center;
 }
 .intro-view > section.hero > video {
   position: absolute;

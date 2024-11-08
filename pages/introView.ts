@@ -5,6 +5,11 @@ export function introView<T>(): T {
     ".intro-view",
     el(
       "section.hero",
+      {
+        style: {
+          backgroundImage: "url('/images/hero.jpg')",
+        },
+      },
       el(
         "video",
         { autoplay: true, loop: true, muted: true, playsInline: true },
@@ -38,7 +43,7 @@ export function introView<T>(): T {
             "a",
             {
               style: {
-                backgroundImage: "url('/images/token.png')",
+                backgroundImage: "url('/images/token.jpg')",
               },
             },
             el(
@@ -59,6 +64,11 @@ export function introView<T>(): T {
           "li",
           el(
             "a",
+            {
+              style: {
+                backgroundImage: "url('/images/thegods.jpg')",
+              },
+            },
             el(
               "video",
               { autoplay: true, loop: true, muted: true, playsInline: true },
