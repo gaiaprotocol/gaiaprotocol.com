@@ -85,12 +85,14 @@
         scroll-snap-align: start;
 
         >a {
-          display      : block;
-          position     : relative;
-          aspect-ratio : 3 / 4;
-          width        : 350px;
-          border-radius: 4.5px;
-          overflow     : hidden;
+          display            : block;
+          position           : relative;
+          aspect-ratio       : 3 / 4;
+          width              : 350px;
+          border-radius      : 4.5px;
+          overflow           : hidden;
+          background-size    : cover;
+          background-position: center;
 
           @container (width <=@phone-width) {
             width: 240px;

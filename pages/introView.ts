@@ -36,6 +36,29 @@ export function introView<T>(): T {
           "li",
           el(
             "a",
+            {
+              style: {
+                backgroundImage: "url('/images/token.png')",
+              },
+            },
+            el(
+              ".content",
+              el("h3", "$GAIA"),
+              el(
+                "p",
+                "A membership token providing various benefits across the Gaia ecosystem.",
+              ),
+            ),
+            {
+              href: "https://token.gaia.cc",
+              target: "_blank",
+            },
+          ),
+        ),
+        el(
+          "li",
+          el(
+            "a",
             el(
               "video",
               { autoplay: true, loop: true, muted: true, playsInline: true },

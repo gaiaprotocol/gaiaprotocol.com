@@ -987,6 +987,8 @@ li.chat-message-list-item > main {
   width: 350px;
   border-radius: 4.5px;
   overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 @container (width <= 520px) {
   .intro-view > section:not(.hero) > ul > li > a {
