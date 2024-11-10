@@ -28,10 +28,39 @@ export function introView<T>(): T {
         }),
       ),
     ),
-    el("section.protocol", el("h2", "Protocol")),
+    el(
+      "section.protocol",
+      el("h2", "Protocol"),
+      el(
+        "ul",
+        el(
+          "li",
+          el(
+            "a",
+            {
+              style: {
+                backgroundImage: "url('/images/gaia-names.png')",
+              },
+            },
+            el(
+              ".content",
+              el("h3", "Gaia Names"),
+              el(
+                "p",
+                "A naming system for the Gaia ecosystem.",
+              ),
+            ),
+            {
+              href: "https://names.gaia.cc",
+              target: "_blank",
+            },
+          ),
+        ),
+      ),
+    ),
     el("section.platform", el("h2", "Platform")),
     el("section.games", el("h2", "Games")),
-    //el("section.metaverse", el("h2", "Metaverse")),
+    el("section.metaverse", el("h2", "Metaverse")),
     el(
       "section.tokens",
       el("h2", "Tokens"),
