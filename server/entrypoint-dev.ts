@@ -5,7 +5,7 @@ import { pages } from "./pages.ts";
 Deno.serve(async (req) => {
   const basePath = Deno.cwd() + "/public";
   const path = new URL(req.url).pathname;
-  const page = pages(path, true);
+  const page = await pages(path, true);
   if (page) return page;
 
   const filePath = basePath + path;

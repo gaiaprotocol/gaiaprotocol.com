@@ -1,5 +1,5 @@
 {
-  "version": "3",
+  "version": "4",
   "remote": {
     "https://deno.land/std@0.223.0/assert/assert.ts": "09d30564c09de846855b7b071e62b5974b001bb72a4b797958fe0660e7849834",
     "https://deno.land/std@0.223.0/assert/assertion_error.ts": "ba8752bd27ebc51f723702fac2f54d3e94447598f54264a6653d6413738a8917",
@@ -89,37 +89,34 @@
     "https://deno.land/std@0.223.0/path/windows/relative.ts": "3e1abc7977ee6cc0db2730d1f9cb38be87b0ce4806759d271a70e4997fc638d7",
     "https://deno.land/std@0.223.0/path/windows/resolve.ts": "8dae1dadfed9d46ff46cc337c9525c0c7d959fb400a6308f34595c45bdca1972",
     "https://deno.land/std@0.223.0/streams/byte_slice_stream.ts": "5bbdcadb118390affa9b3d0a0f73ef8e83754f59bb89df349add669dd9369713",
-    "https://deno.land/std@0.223.0/version.ts": "a25bd16c3b9f0d2861d9fc570eb356441e862cb35013a4d8333b946c0c39fa21"
+    "https://deno.land/std@0.223.0/version.ts": "a25bd16c3b9f0d2861d9fc570eb356441e862cb35013a4d8333b946c0c39fa21",
+    "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts": "dd48b6430b6035d30c49657727dd27327afb4812b448181e01dd805bddbb83de",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/deno/mod.ts": "5cfdb206a700d017ee7fc6934106ad09207374f0a06141ff112fb3749d705811",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/DomSelector.js": "b5ab264a2364282899fa329003e943c6884d85ce48f74e9883f1e1706b198652",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/ElementOrSelector.js": "025ebb30b7bdc1fcb7154f2331b2689067645b8e9930eb4978cecbee777c6569",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/ElementProperties.js": "d930134896bc692a6eab340b7228c6149ec808907535aecf9dceeae019a26624",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/InferElementType.js": "7b80b774cf8e36148748d8cd385b152ff78b9c336e18c6f515e3593e8aedc811",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/InferElementTypeByTag.js": "32850f03d85fa7ae3e6bc2b3571db828403da12aff0594ed5ea4893b3c33faf2",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/Tag.js": "2620018a0f8dc3ea062d6a3fc1dfcf8b643c21867c3ebb80ce5712d0511587bd",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/el.js": "b45142907b58c3ac84cc0a9270c317cc6dbc4db6c4d18512f634f37bf0928093",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/html.js": "1efe6ad280e951edf06c1fbcead47c34e5cd8101b5c4bf8f09d3d3fc678374ef"
   },
   "workspace": {
     "packageJson": {
       "dependencies": [
-        "npm:assert@^2.0.0",
-        "npm:buffer@^6.0.3",
-        "npm:chai@^4.3.7",
-        "npm:crypto-browserify@^3.12.0",
-        "npm:css-loader@^6.8.1",
-        "npm:dotenv@^16.3.1",
-        "npm:firebase@^10.8.1",
-        "npm:gh-pages@^6.0.0",
-        "npm:http-browserify@^1.7.0",
-        "npm:https-browserify@^1.0.0",
-        "npm:less-loader@^11.1.3",
+        "npm:@common-module/app@~0.1.6",
+        "npm:@types/node@^22.7.5",
+        "npm:@types/webpack@^5.28.5",
+        "npm:css-loader@^7.1.2",
+        "npm:less-loader@^12.2.0",
         "npm:less@^4.2.0",
-        "npm:mini-css-extract-plugin@^2.7.6",
-        "npm:os-browserify@^0.3.0",
-        "npm:process@^0.11.10",
-        "npm:random-bigint@^0.0.1",
-        "npm:stream-browserify@^3.0.0",
-        "npm:ts-loader@^9.4.4",
-        "npm:ts-node@^10.9.1",
-        "npm:typechain@^8.3.1",
-        "npm:typescript@^5.1.6",
-        "npm:url@^0.11.1",
-        "npm:urlpattern-polyfill@^10.0.0",
+        "npm:mini-css-extract-plugin@^2.9.1",
+        "npm:ts-loader@^9.5.1",
+        "npm:ts-node@^10.9.2",
+        "npm:typescript@^5.6.3",
         "npm:webpack-cli@^5.1.4",
-        "npm:webpack@^5.88.2",
-        "npm:yaml-loader@^0.8.0"
+        "npm:webpack@^5.95.0",
+        "npm:yaml-loader@~0.8.1"
       ]
     }
   }

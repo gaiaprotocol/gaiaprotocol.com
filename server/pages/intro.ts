@@ -1,6 +1,15 @@
-import { el } from "@common-module/universal-page";
+import { el } from "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts";
+import { createSupabaseClient } from "./supabase.ts";
+import Notice from "../entities/Notice.ts";
 
-export function introView<T>(): T {
+export async function intro() {
+  const supabase = createSupabaseClient();
+  const { data, error } = await supabase.from("notices").select("*").limit(12)
+    .order("id", { ascending: false });
+  if (error) throw error;
+
+  const notices = data as Notice[];
+
   return el(
     ".intro-view",
     el(
@@ -123,5 +132,33 @@ export function introView<T>(): T {
       ),
     ),
     el("section.technologies", el("h2", "Technologies")),
+    el(
+      "section.notices",
+      el("h2", "Notices"),
+      el(
+        "ul",
+        ...notices.map((notice) =>
+          el(
+            "li",
+            el(
+              "a",
+              {
+                style: {
+                  backgroundImage: `url(${notice.cover_image_url})`,
+                },
+              },
+              el(
+                ".content",
+                el("h3", notice.category),
+                el("p", notice.title),
+              ),
+              {
+                href: `/index/${notice.slug}`,
+              },
+            ),
+          )
+        ),
+      ),
+    ),
   );
 }

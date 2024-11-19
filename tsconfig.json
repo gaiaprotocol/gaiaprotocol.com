@@ -82,7 +82,7 @@
   "ts-node": {
     "transpileOnly": true,
     "moduleTypes": {
-      "webpack.config.ts": "cjs",
+      "webpack.config.dev.ts": "cjs",
       "webpack.config.prod.ts": "cjs",
     }
   }

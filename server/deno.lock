@@ -1,7 +1,8 @@
 {
   "version": "4",
   "specifiers": {
-    "npm:@common-module/universal-page@~0.1.7": "0.1.7"
+    "npm:@common-module/universal-page@~0.1.7": "0.1.7",
+    "npm:marked@*": "15.0.1"
   },
   "npm": {
     "@common-module/ts@0.1.6": {
@@ -12,9 +13,15 @@
       "dependencies": [
         "@common-module/ts"
       ]
+    },
+    "marked@15.0.1": {
+      "integrity": "sha512-VnnE19XO2Vb2oZeH8quAepfrb6Aaz4OoY8yZQACfuy/5KVJ0GxYC0Qxzz/iuc+g5UF7H0HJ+QROfvH26XeBdDA=="
     }
   },
   "remote": {
+    "https://deno.land/std@0.150.0/media_types/_util.ts": "ce9b4fc4ba1c447dafab619055e20fd88236ca6bdd7834a21f98bd193c3fbfa1",
+    "https://deno.land/std@0.150.0/media_types/mod.ts": "2d4b6f32a087029272dc59e0a55ae3cc4d1b27b794ccf528e94b1925795b3118",
+    "https://deno.land/std@0.150.0/media_types/vendor/mime-db.v1.52.0.ts": "724cee25fa40f1a52d3937d6b4fbbfdd7791ff55e1b7ac08d9319d5632c7f5af",
     "https://deno.land/std@0.168.0/async/abortable.ts": "80b2ac399f142cc528f95a037a7d0e653296352d95c681e284533765961de409",
     "https://deno.land/std@0.168.0/async/deadline.ts": "2c2deb53c7c28ca1dda7a3ad81e70508b1ebc25db52559de6b8636c9278fd41f",
     "https://deno.land/std@0.168.0/async/debounce.ts": "60301ffb37e730cd2d6f9dadfd0ecb2a38857681bd7aaf6b0a106b06e5210a98",
@@ -69,9 +76,34 @@
     "https://deno.land/std@0.223.0/path/windows/resolve.ts": "8dae1dadfed9d46ff46cc337c9525c0c7d959fb400a6308f34595c45bdca1972",
     "https://deno.land/std@0.223.0/streams/byte_slice_stream.ts": "5bbdcadb118390affa9b3d0a0f73ef8e83754f59bb89df349add669dd9369713",
     "https://deno.land/std@0.223.0/version.ts": "a25bd16c3b9f0d2861d9fc570eb356441e862cb35013a4d8333b946c0c39fa21",
-    "https://raw.githubusercontent.com/yjgaia/deno-module/main/api.ts": "f0fe809bebba72c4f25da7cfcfb4e0dd1e056957f9bdf58816f79fea87f79303",
-    "https://raw.githubusercontent.com/yjgaia/deno-module/main/page.ts": "d632020796af992f53f6a1b7b4ea289b1e0a93a2736794d5df2d1729184be7c9",
-    "https://raw.githubusercontent.com/yjgaia/universal-page-module/main/src/mod.ts": "ea971e59d1c8d2d0d023301daa35c953b2177fdbcdef711c07b878812dce05a5"
+    "https://deno.land/x/marked@1.0.2/mod.ts": "57e4fd38be13ae9efd001704eea481570fce83fe502f4fb64aba140fd7fd75cb",
+    "https://deno.land/x/xhr@0.3.0/mod.ts": "094aacd627fd9635cd942053bf8032b5223b909858fa9dc8ffa583752ff63b20",
+    "https://esm.sh/@supabase/supabase-js@2.31.0": "53d4d0d4c269d09333ce288848311cc12fccdb1401b329ff03d1ba1084b259c2",
+    "https://esm.sh/v135/@supabase/functions-js@2.1.5/denonext/functions-js.mjs": "739affd2df20c1affd91991c3731c2537d270b82be5cdbd926c43be40eb2fdc5",
+    "https://esm.sh/v135/@supabase/functions-js@2.3.1/denonext/functions-js.mjs": "c10a0bbd935fc12cae58918b8e23cb339d54c443983caeb597dd8cd76a76f940",
+    "https://esm.sh/v135/@supabase/gotrue-js@2.57.0/denonext/gotrue-js.mjs": "a4e6768643628fc5445683f4f58090ea5b65c51c3abb165dc0a385cf8eae2121",
+    "https://esm.sh/v135/@supabase/gotrue-js@2.62.2/denonext/gotrue-js.mjs": "326e26884bb2e359f192078b8c602a2e0acdc754767a274fe1df844319a8d319",
+    "https://esm.sh/v135/@supabase/node-fetch@2.6.14/denonext/node-fetch.mjs": "23a71af3512da67a8757ab1e2356fa22565758444ea1fc08e0de0e8d4625e8aa",
+    "https://esm.sh/v135/@supabase/node-fetch@2.6.15/denonext/node-fetch.mjs": "efad00ea3d4cbe1bee688836ef75339d49a1981bc5728a13e9ad5f26791d5efb",
+    "https://esm.sh/v135/@supabase/postgrest-js@1.15.2/denonext/postgrest-js.mjs": "1d36cf3106c6dd6ce21473b57d88478802ceef6d22e67af1f92c508607302e50",
+    "https://esm.sh/v135/@supabase/postgrest-js@1.9.0/denonext/postgrest-js.mjs": "e6239e65dca3c73527af617ee406934dc509a33e4082a9da9c3aa6c430519cdf",
+    "https://esm.sh/v135/@supabase/realtime-js@2.8.4/denonext/realtime-js.mjs": "9f8af6f82b095b1b1d336a92c4ff8519a5b7f783a1e09eab005114b983cafd5d",
+    "https://esm.sh/v135/@supabase/realtime-js@2.9.4/denonext/realtime-js.mjs": "5a4443e535c1ef8c469c281442a976f47735b3ee378c9e6d8b9a379c56b2f852",
+    "https://esm.sh/v135/@supabase/storage-js@2.5.4/denonext/storage-js.mjs": "dff68679fb795ec7e157b8f51cb0b8c544d6c3d57ecc093f5b15eb909439efcd",
+    "https://esm.sh/v135/@supabase/storage-js@2.5.5/denonext/storage-js.mjs": "66e29e4e55c7d396503e2d1d9376cfbc34f046b962bce4524c2d80b209fff413",
+    "https://esm.sh/v135/@supabase/supabase-js@2.31.0/denonext/supabase-js.mjs": "4e519d325e24f548908a92fcefa775ab431e4f5f2e15b654389caefff2641b86",
+    "https://esm.sh/v135/bufferutil@4.0.8/denonext/bufferutil.mjs": "60a4618cbd1a5cb24935c55590b793d4ecb33862357d32e1d4614a0bbb90947f",
+    "https://esm.sh/v135/cross-fetch@3.1.8/denonext/cross-fetch.mjs": "8fba9e7c3fbaf0d2168beb63ce0cd21b5bfbfbd77e2fcbf8d957d533a71222f6",
+    "https://esm.sh/v135/es5-ext@0.10.62/denonext/global.js": "2f51d9acef1f761faaa542da919b3c747744ea29fe709d0a904fd531716a93d6",
+    "https://esm.sh/v135/node-gyp-build@4.6.1/denonext/node-gyp-build.mjs": "5d28b312f145a6cb2ec0dbdd80a7d34c0e0e6b5dcada65411d8bcff6c8991cc6",
+    "https://esm.sh/v135/utf-8-validate@6.0.3/denonext/utf-8-validate.mjs": "410c48d66840e987e474a4849cd25829817415cedd25466280effb1287d05aa5",
+    "https://esm.sh/v135/websocket@1.0.34/denonext/websocket.mjs": "dfe5d62007e9f7430d561e2376fe47caa9d04cb016d83d3386fcc2206a90296b",
+    "https://esm.sh/v135/ws@8.16.0/denonext/ws.mjs": "0fa0c00b69577ba36d0a36001329b2cec91498cb2e33e329fc76aa6d51a0d54d",
+    "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/api.ts": "fe39901d58dd30153e5255238b2b7248eea7655d104f02b1623100bcc3d8b199",
+    "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts": "5cffc99472441cd3a71af05e31f2b87ee264a0ca1878661acca7440e4fef1764",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/deno/mod.ts": "5cfdb206a700d017ee7fc6934106ad09207374f0a06141ff112fb3749d705811",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/el.js": "b45142907b58c3ac84cc0a9270c317cc6dbc4db6c4d18512f634f37bf0928093",
+    "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/html.js": "1efe6ad280e951edf06c1fbcead47c34e5cd8101b5c4bf8f09d3d3fc678374ef"
   },
   "workspace": {
     "dependencies": [
