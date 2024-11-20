@@ -2254,6 +2254,7 @@ li.chat-message-list-item > main {
 .intro-view > section:not(.hero) > ul > li > a > .content > h3 {
   font-size: 13.5px;
   flex-grow: 1;
+  text-transform: capitalize;
 }
 .intro-view > section:not(.hero) > ul > li > a > .content > p {
   line-height: 1.375;
