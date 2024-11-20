@@ -16,7 +16,7 @@ export async function intro() {
       "section.hero",
       {
         style: {
-          backgroundImage: "url('/images/hero.jpg')",
+          backgroundImage: "url('https://common-resources.gaia.cc/hero/hero.jpg')",
         },
       },
       el(
@@ -48,7 +48,7 @@ export async function intro() {
             "a",
             {
               style: {
-                backgroundImage: "url('/images/gaia-names.png')",
+                backgroundImage: "url('https://common-resources.gaia.cc/covers/gaia-names.png')",
               },
             },
             el(
@@ -81,7 +81,7 @@ export async function intro() {
             "a",
             {
               style: {
-                backgroundImage: "url('/images/token.jpg')",
+                backgroundImage: "url('https://common-resources.gaia.cc/covers/token.jpg')",
               },
             },
             el(
@@ -104,14 +104,14 @@ export async function intro() {
             "a",
             {
               style: {
-                backgroundImage: "url('/images/thegods.jpg')",
+                backgroundImage: "url('https://common-resources.gaia.cc/covers/thegods.jpg')",
               },
             },
             el(
               "video",
               { autoplay: true, loop: true, muted: true, playsInline: true },
               el("source", {
-                src: "/videos/thegods.mp4",
+                src: "https://common-resources.gaia.cc/covers/thegods.mp4",
                 type: "video/mp4",
               }),
             ),
