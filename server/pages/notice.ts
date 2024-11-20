@@ -25,16 +25,21 @@ export async function notice(slug: string) {
   if (error) throw error;
 
   const notice = data?.[0] as Notice | undefined;
-  return notice
-    ? el(
-      ".notice-view",
-      el(
-        "header",
-        el(".date", format(new Date(notice.created_at))),
-        el("h1", notice.title),
-        el("h2", notice.subtitle),
-      ),
-      el("main.markdown-body", marked(notice.content)),
-    )
-    : el(".notice-view", "Not Found");
+  return {
+    title: notice?.title || "Not Found",
+    description: notice?.subtitle,
+    coverImageURL: notice?.cover_image_url,
+    html: notice
+      ? el(
+        ".notice-view",
+        el(
+          "header",
+          el(".date", format(new Date(notice.created_at))),
+          el("h1", notice.title),
+          el("h2", notice.subtitle),
+        ),
+        el("main.markdown-body", marked(notice.content)),
+      )
+      : el(".notice-view", "Not Found"),
+  };
 }

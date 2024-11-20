@@ -100,7 +100,7 @@
     "https://esm.sh/v135/websocket@1.0.34/denonext/websocket.mjs": "dfe5d62007e9f7430d561e2376fe47caa9d04cb016d83d3386fcc2206a90296b",
     "https://esm.sh/v135/ws@8.16.0/denonext/ws.mjs": "0fa0c00b69577ba36d0a36001329b2cec91498cb2e33e329fc76aa6d51a0d54d",
     "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/api.ts": "fe39901d58dd30153e5255238b2b7248eea7655d104f02b1623100bcc3d8b199",
-    "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts": "5cffc99472441cd3a71af05e31f2b87ee264a0ca1878661acca7440e4fef1764",
+    "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts": "7f28cd939da1c660874490c632ea817f2f703b4bc553e342ef7ee05f325a56cd",
     "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/deno/mod.ts": "5cfdb206a700d017ee7fc6934106ad09207374f0a06141ff112fb3749d705811",
     "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/el.js": "b45142907b58c3ac84cc0a9270c317cc6dbc4db6c4d18512f634f37bf0928093",
     "https://raw.githubusercontent.com/yjgaia/universal-page-module/refs/heads/main/lib/html.js": "1efe6ad280e951edf06c1fbcead47c34e5cd8101b5c4bf8f09d3d3fc678374ef"

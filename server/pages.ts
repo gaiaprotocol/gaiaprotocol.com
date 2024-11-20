@@ -36,16 +36,20 @@ export async function pages(
   }
 
   if (path.startsWith("/index/")) {
+    const data = await notice(path.slice(7));
     return new Response(
       createPage(
         {
-          title: (isDevMode ? "(Dev) " : "") + "Gaia Protocol",
+          title: (isDevMode ? "(Dev) " : "") + data.title + " | Gaia Protocol",
+          description: data.description,
+          coverImageURL: data.coverImageURL,
           jsFiles: [isDevMode ? "/bundle-dev.js" : "/bundle.js"],
           cssFiles: [isDevMode ? "/bundle-dev.css" : "/bundle.css"],
           gtagId: GTAG_ID,
           viewTransition: true,
+          twitterHandle: "@Gaia_Protocol",
         },
-        layout(await notice(path.slice(7))),
+        layout(data.html),
       ),
       {
         status: 200,
