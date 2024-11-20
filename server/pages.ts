@@ -40,7 +40,8 @@ export async function pages(
     return new Response(
       createPage(
         {
-          title: (isDevMode ? "(Dev) " : "") + data.title + " | Gaia Protocol",
+          title: (isDevMode ? "(Dev) " : "") + data.title,
+          suffix: "Gaia Protocol",
           description: data.description,
           coverImageURL: data.coverImageURL,
           jsFiles: [isDevMode ? "/bundle-dev.js" : "/bundle.js"],
