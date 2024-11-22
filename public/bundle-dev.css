@@ -2080,6 +2080,12 @@ li.chat-message-list-item > main {
   align-items: flex-start;
   justify-content: space-between;
 }
+@container (width <= 520px) {
+  .intro-view > section:not(.hero) > ul > li > a > .content > header {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
 .intro-view > section:not(.hero) > ul > li > a > .content > header > h3 {
   font-size: 13.5px;
   text-transform: capitalize;
@@ -2095,6 +2101,11 @@ li.chat-message-list-item > main {
   font-size: 13.5px;
   padding: 4.25px 9px;
   border-radius: 14px;
+}
+@container (width <= 520px) {
+  .intro-view > section:not(.hero) > ul > li > a > .content > header > .coming-soon {
+    margin-left: -4.25px;
+  }
 }
 .intro-view > section:not(.hero) > ul > li > a > .content > header > .coming-soon > .icon {
   width: 16px;

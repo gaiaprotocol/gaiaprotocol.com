@@ -142,6 +142,11 @@
               align-items    : flex-start;
               justify-content: space-between;
 
+              @container (width <=@phone-width) {
+                flex-direction: column-reverse;
+                gap           : 10px;
+              }
+
               >h3 {
                 font-size     : 13.5px;
                 text-transform: capitalize;
@@ -160,6 +165,10 @@
                 font-size    : 13.5px;
                 padding      : 4.25px 9px;
                 border-radius: 14px;
+
+                @container (width <=@phone-width) {
+                  margin-left: -4.25px;
+                }
 
                 >.icon {
                   width : 16px;
