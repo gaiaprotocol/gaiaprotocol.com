@@ -1,5 +1,6 @@
-# Official Introduction to Gaia Protocol
-## Building the Next Generation of Web3 Social and Gaming Infrastructure
+# Introducing Gaia Protocol
+
+## Connecting Social and Gaming Value with Digital Assets in Web3
 
 ![Gaia Protocol](https://common-resources.gaia.cc/covers/gaiaprotocol.jpg)
 
