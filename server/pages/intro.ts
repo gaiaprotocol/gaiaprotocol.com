@@ -381,7 +381,7 @@ export function intro() {
     el("section.technologies", el("h2", "Technologies")),
     el(
       "section.notices",
-      el("h2", "Notices"),
+      el("h2", "News"),
       el(
         "ul",
         ...notices.map((notice) =>
