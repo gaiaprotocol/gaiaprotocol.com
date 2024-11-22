@@ -63,24 +63,101 @@ export function intro() {
             {
               style: {
                 backgroundImage:
-                  "url('https://common-resources.gaia.cc/covers/gaia-names.png')",
+                  "url('https://common-resources.gaia.cc/covers/material-factory.jpg')",
               },
+              href:
+                "https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/gaming/MaterialFactory.sol",
+              target: "_blank",
             },
             el(
               ".content",
-              el("header", el("h3", "Gaia Names")),
+              el("header", el("h3", "Material Factory")),
               el(
                 "main",
                 el(
                   "p",
-                  "A naming system for the Gaia ecosystem.",
+                  "An ERC-20 based system for tokenizing game resources with automated pricing based on supply and demand.",
                 ),
               ),
             ),
+          ),
+        ),
+        el(
+          "li",
+          el(
+            "a",
             {
-              href: "https://names.gaia.cc",
+              style: {
+                backgroundImage:
+                  "url('https://common-resources.gaia.cc/covers/topic-shares.jpg')",
+              },
+              href:
+                "https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/TopicShares.sol",
               target: "_blank",
             },
+            el(
+              ".content",
+              el("header", el("h3", "Topic Shares")),
+              el(
+                "main",
+                el(
+                  "p",
+                  "A tokenized system for subject-based participation where share holders receive transaction fees and influence community decisions.",
+                ),
+              ),
+            ),
+          ),
+        ),
+        el(
+          "li",
+          el(
+            "a",
+            {
+              style: {
+                backgroundImage:
+                  "url('https://common-resources.gaia.cc/covers/clan-emblems.jpg')",
+              },
+              href:
+                "https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/ClanEmblems.sol",
+              target: "_blank",
+            },
+            el(
+              ".content",
+              el("header", el("h3", "Clan Emblems")),
+              el(
+                "main",
+                el(
+                  "p",
+                  "A digital insignia system representing community membership, where transaction fees contribute to clan operations.",
+                ),
+              ),
+            ),
+          ),
+        ),
+        el(
+          "li",
+          el(
+            "a",
+            {
+              style: {
+                backgroundImage:
+                  "url('https://common-resources.gaia.cc/covers/persona-fragments.jpg')",
+              },
+              href:
+                "https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/PersonaFragments.sol",
+              target: "_blank",
+            },
+            el(
+              ".content",
+              el("header", el("h3", "Persona Fragments")),
+              el(
+                "main",
+                el(
+                  "p",
+                  "A system that tokenizes digital identity and relationships, where users can establish connections through fragment ownership.",
+                ),
+              ),
+            ),
           ),
         ),
       ),
@@ -97,23 +174,24 @@ export function intro() {
             {
               style: {
                 backgroundImage:
-                  "url('https://common-resources.gaia.cc/covers/gaia-personas.jpg')",
+                  "url('https://common-resources.gaia.cc/covers/gaia-materials.jpg')",
               },
             },
             el(
               ".content",
-              el("header", el("h3", "Gaia Personas"), comingSoon),
+              el("header", el("h3", "Gaia Materials"), comingSoon),
               el(
                 "main",
                 el(
                   "p",
-                  "A social-fi platform where users express their Web3 identity through personas, trade them, and earn fees from transactions.",
+                  "A platform for trading Web3 gaming resources as ERC-20 tokens.",
                 ),
               ),
             ),
             {
-              href: "https://personas.gaia.cc",
-              target: "_blank",
+              //href: "https://materials.gaia.cc",
+              //target: "_blank",
+              onclick: "alert('Coming soon!')",
             },
           ),
         ),
@@ -139,8 +217,9 @@ export function intro() {
               ),
             ),
             {
-              href: "https://topic.trade",
-              target: "_blank",
+              //href: "https://topic.trade",
+              //target: "_blank",
+              onclick: "alert('Coming soon!')",
             },
           ),
         ),
@@ -166,8 +245,9 @@ export function intro() {
               ),
             ),
             {
-              href: "https://clans.gaia.cc",
-              target: "_blank",
+              //href: "https://clans.gaia.cc",
+              //target: "_blank",
+              onclick: "alert('Coming soon!')",
             },
           ),
         ),
@@ -178,22 +258,50 @@ export function intro() {
             {
               style: {
                 backgroundImage:
-                  "url('https://common-resources.gaia.cc/covers/gaia-materials.jpg')",
+                  "url('https://common-resources.gaia.cc/covers/gaia-personas.jpg')",
               },
             },
             el(
               ".content",
-              el("header", el("h3", "Gaia Materials"), comingSoon),
+              el("header", el("h3", "Gaia Personas"), comingSoon),
               el(
                 "main",
                 el(
                   "p",
-                  "A platform for trading Web3 gaming resources as ERC-20 tokens.",
+                  "A social-fi platform where users express their Web3 identity through personas, trade them, and earn fees from transactions.",
                 ),
               ),
             ),
             {
-              href: "https://materials.gaia.cc",
+              //href: "https://personas.gaia.cc",
+              //target: "_blank",
+              onclick: "alert('Coming soon!')",
+            },
+          ),
+        ),
+        el(
+          "li",
+          el(
+            "a",
+            {
+              style: {
+                backgroundImage:
+                  "url('https://common-resources.gaia.cc/covers/gaia-names.png')",
+              },
+            },
+            el(
+              ".content",
+              el("header", el("h3", "Gaia Names")),
+              el(
+                "main",
+                el(
+                  "p",
+                  "A naming system for the Gaia ecosystem.",
+                ),
+              ),
+            ),
+            {
+              href: "https://names.gaia.cc",
               target: "_blank",
             },
           ),
