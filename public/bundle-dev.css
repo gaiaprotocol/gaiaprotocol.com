@@ -1621,6 +1621,11 @@ dialog.modal.confirm-dialog > header > h1 {
   align-items: center;
   gap: 12px;
 }
+dialog.modal.alert-dialog > header > h1 > .icon,
+dialog.modal.confirm-dialog > header > h1 > .icon {
+  width: 32px;
+  height: 32px;
+}
 .accordion-item {
   border-bottom: 1px solid var(--line-color);
 }
