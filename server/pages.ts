@@ -36,7 +36,7 @@ export async function pages(
   }
 
   if (path.startsWith("/index/")) {
-    const data = await notice(path.slice(7));
+    const data = notice(path.slice(7));
     return new Response(
       createPage(
         {

@@ -1,7 +1,6 @@
 import { marked } from "https://deno.land/x/marked@1.0.2/mod.ts";
 import { el } from "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts";
-import Notice from "../entities/Notice.ts";
-import { createSupabaseClient } from "./supabase.ts";
+import { notices } from "../notices.ts";
 
 function format(date: Date) {
   return new Intl.DateTimeFormat(
@@ -14,17 +13,9 @@ function format(date: Date) {
   ).format(date);
 }
 
-export async function notice(slug: string) {
+export function notice(slug: string) {
   slug = slug.replace(/\/$/, "");
-
-  const supabase = createSupabaseClient();
-  const { data, error } = await supabase.from("notices").select("*").eq(
-    "slug",
-    slug,
-  );
-  if (error) throw error;
-
-  const notice = data?.[0] as Notice | undefined;
+  const notice = notices.find((notice) => notice.slug === slug);
   return {
     title: notice?.title || "Not Found",
     description: notice?.subtitle,

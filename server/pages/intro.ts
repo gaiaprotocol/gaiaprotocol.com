@@ -1,22 +1,29 @@
 import { el } from "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts";
-import { createSupabaseClient } from "./supabase.ts";
-import Notice from "../entities/Notice.ts";
+import { notices } from "../notices.ts";
 
-export async function intro() {
-  const supabase = createSupabaseClient();
-  const { data, error } = await supabase.from("notices").select("*").limit(12)
-    .order("id", { ascending: false });
-  if (error) throw error;
+const dot =
+  '<svg class="dot" width="0.15625rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="currentColor"></path></svg>';
 
-  const notices = data as Notice[];
+function format(date: Date) {
+  return new Intl.DateTimeFormat(
+    "en",
+    {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    },
+  ).format(date);
+}
 
+export function intro() {
   return el(
     ".intro-view",
     el(
       "section.hero",
       {
         style: {
-          backgroundImage: "url('https://common-resources.gaia.cc/hero/hero.jpg')",
+          backgroundImage:
+            "url('https://common-resources.gaia.cc/hero/hero.jpg')",
         },
       },
       el(
@@ -48,7 +55,8 @@ export async function intro() {
             "a",
             {
               style: {
-                backgroundImage: "url('https://common-resources.gaia.cc/covers/gaia-names.png')",
+                backgroundImage:
+                  "url('https://common-resources.gaia.cc/covers/gaia-names.png')",
               },
             },
             el(
@@ -81,7 +89,8 @@ export async function intro() {
             "a",
             {
               style: {
-                backgroundImage: "url('https://common-resources.gaia.cc/covers/token.jpg')",
+                backgroundImage:
+                  "url('https://common-resources.gaia.cc/covers/token.jpg')",
               },
             },
             el(
@@ -104,7 +113,8 @@ export async function intro() {
             "a",
             {
               style: {
-                backgroundImage: "url('https://common-resources.gaia.cc/covers/thegods.jpg')",
+                backgroundImage:
+                  "url('https://common-resources.gaia.cc/covers/thegods.jpg')",
               },
             },
             el(
@@ -149,7 +159,12 @@ export async function intro() {
               },
               el(
                 ".content",
-                el("h3", notice.category),
+                el(
+                  "h3",
+                  notice.category,
+                  dot,
+                  format(new Date(notice.created_at)),
+                ),
                 el("p", notice.title),
               ),
               {

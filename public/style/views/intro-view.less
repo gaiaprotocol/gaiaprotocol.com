@@ -129,16 +129,20 @@
             height  : 100%;
             padding : 18px;
 
-            display       : flex;
-            flex-direction: column;
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-between;
 
             cursor     : pointer;
             user-select: none;
 
             >h3 {
               font-size     : 13.5px;
-              flex-grow     : 1;
               text-transform: capitalize;
+
+              display    : flex;
+              align-items: center;
+              gap        : 4.25px;
             }
 
             >p {
