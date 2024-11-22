@@ -2146,7 +2146,7 @@ li.chat-message-list-item > main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 10px;
 }
 .notice-view > main > * {
   width: 100%;
@@ -2159,6 +2159,19 @@ li.chat-message-list-item > main {
 .notice-view > main > h5,
 .notice-view > main > h6 {
   font-weight: normal;
+}
+.notice-view > main > h3 {
+  margin-top: 45px;
+  font-size: 27px;
+}
+@container (width <= 520px) {
+  .notice-view > main ul {
+    padding-left: 20px;
+  }
+}
+.notice-view > main > hr {
+  background-color: transparent;
+  height: 0;
 }
 .notice-view > main > :not(:has(>img)) {
   max-width: 725px;
