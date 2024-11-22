@@ -30,7 +30,39 @@
   }
 
   >main {
-    max-width: 725px;
+    max-width: 1088px;
     margin   : 0 auto;
+
+    display       : flex;
+    flex-direction: column;
+    gap           : 11px;
+
+    >* {
+      width : 100%;
+      border: none;
+    }
+
+    >h1,
+    >h2,
+    >h3,
+    >h4,
+    >h5,
+    >h6 {
+      font-weight: normal;
+    }
+
+    >:not(:has(>img)) {
+      max-width   : 725px;
+      margin-left : auto;
+      margin-right: auto;
+    }
+
+    >:has(>img) {
+      margin-bottom: 97px;
+
+      >img {
+        border-radius: 8px;
+      }
+    }
   }
 }

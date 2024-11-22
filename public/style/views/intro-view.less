@@ -133,20 +133,45 @@
             flex-direction : column;
             justify-content: space-between;
 
-            cursor     : pointer;
-            user-select: none;
+            cursor: pointer;
 
-            >h3 {
-              font-size     : 13.5px;
-              text-transform: capitalize;
+            text-shadow: 0px 0px 10px #000;
 
-              display    : flex;
-              align-items: center;
-              gap        : 4.25px;
+            >header {
+              display        : flex;
+              align-items    : flex-start;
+              justify-content: space-between;
+
+              >h3 {
+                font-size     : 13.5px;
+                text-transform: capitalize;
+
+                display    : flex;
+                align-items: center;
+                gap        : 4.25px;
+              }
+
+              >.coming-soon {
+                background-color: rgba(0, 0, 0, 0.5);
+
+                display      : flex;
+                align-items  : center;
+                gap          : 4.25px;
+                font-size    : 13.5px;
+                padding      : 4.25px 9px;
+                border-radius: 14px;
+
+                >.icon {
+                  width : 16px;
+                  height: 16px;
+                }
+              }
             }
 
-            >p {
-              line-height: 1.375;
+            >main {
+              >p {
+                line-height: 1.375;
+              }
             }
           }
         }

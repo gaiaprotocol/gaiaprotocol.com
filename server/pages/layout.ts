@@ -8,8 +8,9 @@ export function header() {
     el(
       ".buttons",
       el("a.button.contained", "Dashboard", {
-        href: "https://dashboard.gaia.cc",
-        target: "_blank",
+        //href: "https://dashboard.gaia.cc",
+        //target: "_blank",
+        onclick: "alert('Coming soon!')",
       }),
     ),
   );

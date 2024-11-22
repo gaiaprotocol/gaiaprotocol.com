@@ -50,7 +50,7 @@ export const notices: Notice[] = await Promise.all(
   [{
     slug: "introducing-gaia-protocol",
     category: "announcement",
-    coverImageURL: "https://yjgaia.com/ogp.png",
+    coverImageURL: "https://common-resources.gaia.cc/covers/gaiaprotocol.jpg",
     createdAt: "2024-11-22",
   }].map((data) =>
     exportNoticeFromMarkdown(
