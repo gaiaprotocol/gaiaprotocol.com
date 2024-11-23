@@ -2179,6 +2179,18 @@ li.chat-message-list-item > main {
     padding-left: 20px;
   }
 }
+.notice-view > main p > a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline-color);
+  transition: text-decoration-color 0.25s ease;
+}
+.notice-view > main p > a:hover {
+  text-decoration-color: currentColor;
+}
+.notice-view > main p > a[target="_blank"]::after {
+  content: " (opens in new tab)";
+}
 .notice-view > main > hr {
   margin-top: 45px;
   margin-bottom: 45px;

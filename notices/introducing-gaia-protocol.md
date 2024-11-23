@@ -4,7 +4,7 @@
 
 ![Gaia Protocol](https://common-resources.gaia.cc/covers/gaiaprotocol.jpg)
 
-Gaia Protocol is an innovative blockchain-based protocol that transforms social relationships and gaming experiences into digital assets within the Web3 ecosystem. Built on [Base](https://base.org), Gaia Protocol addresses the gap between a robust Web3 infrastructure and a currently underdeveloped application layer, serving as a crucial bridge for the ecosystem.  
+Gaia Protocol is an innovative blockchain-based protocol that transforms social relationships and gaming experiences into digital assets within the Web3 ecosystem. Built on [Base](https://base.org){:target="_blank"}, Gaia Protocol addresses the gap between a robust Web3 infrastructure and a currently underdeveloped application layer, serving as a crucial bridge for the ecosystem.  
 
 Through Gaia Protocol, users can tokenize digital identities, community memberships, topic-based participation, and in-game resources, turning them into valuable digital assets. This approach empowers users with ownership and offers economic incentives through active participation.
 
