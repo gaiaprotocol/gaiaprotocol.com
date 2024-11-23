@@ -2160,6 +2160,10 @@ li.chat-message-list-item > main {
 .notice-view > main > h6 {
   font-weight: normal;
 }
+.notice-view > main > h2 {
+  margin-top: 68px;
+  font-size: 36px;
+}
 .notice-view > main > h3 {
   margin-top: 45px;
   font-size: 27px;
@@ -2170,8 +2174,10 @@ li.chat-message-list-item > main {
   }
 }
 .notice-view > main > hr {
-  background-color: transparent;
-  height: 0;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  background-color: #8c8c8c;
+  height: 1px;
 }
 .notice-view > main > :not(:has(>img)) {
   max-width: 725px;

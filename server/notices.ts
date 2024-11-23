@@ -14,7 +14,9 @@ async function exportNoticeFromMarkdown(
   coverImageURL: string,
   createdAt: string,
 ) {
-  const markdownContent = await Deno.readTextFile(Deno.cwd() + "/notices/" + slug + ".md");
+  const markdownContent = await Deno.readTextFile(
+    Deno.cwd() + "/notices/" + slug + ".md",
+  );
   const lines = markdownContent.split("\n");
   let title = "";
   let subtitle = "";
