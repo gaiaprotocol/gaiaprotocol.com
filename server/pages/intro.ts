@@ -45,9 +45,9 @@ export function intro() {
         el("h1", "Gaia Protocol"),
         el("p", "The Web3 protocol for social and gaming."),
         el("a.button.contained", "Learn more", {
-          //href: "https://docs.gaia.cc",
+          href: "/index/introducing-gaia-protocol",
           //target: "_blank",
-          onclick: "alert('Coming soon!')",
+          //onclick: "alert('Coming soon!')",
         }),
       ),
     ),

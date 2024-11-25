@@ -1149,6 +1149,9 @@ button.contained .material-loading-spinner > svg > circle {
   --dropdown-menu-item-hover-bg-color: #424242;
   --loading-spinner-color: #fff;
   --loading-spinner-on-contained-button-color: #000;
+  --snackbar-bg-color: var(--page-bg-color);
+  --snackbar-text-color: #fff;
+  --snackbar-line-color: var(--line-color);
   /* Social Components */
   --chat-message-form-bg-color: #2f2f2f;
   --avatar-bg-color: #252527;
@@ -1639,6 +1642,30 @@ dialog.modal.confirm-dialog > header > h1 > .icon {
   width: 24px;
   height: 24px;
 }
+.snackbar {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  z-index: 999998;
+  max-width: 532px;
+  width: 90%;
+  background-color: var(--snackbar-bg-color);
+  color: var(--snackbar-text-color);
+  border: 1px solid var(--snackbar-line-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 24px;
+  padding: 5px;
+  padding-left: 25px;
+  gap: 8px;
+}
+@container (width < 1280px) {
+  .snackbar {
+    bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
 /* Social Components */
 .author-name-display {
   font-weight: bold;
@@ -1835,12 +1862,75 @@ li.chat-message-list-item > main {
   }
 }
 /* Gaia Components */
+.nft-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 13.5px;
+}
+@container (width < 720px) {
+  .nft-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+.nft-list-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  background-size: 100%;
+  background-position: center;
+  transition: background-size 0.3s ease-in-out;
+}
+.nft-list-item:hover {
+  background-size: 105%;
+}
+.nft-list-item > a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+}
+.nft-list-item > a > h3 {
+  font-size: 13.5px;
+  flex-grow: 1;
+}
+.nft-list-item > a > p {
+  font-size: 16px;
+  line-height: 1.375;
+}
+.nft-list-item > .check-icon-container {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 1;
+  border: 1px solid var(--line-color);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+.nft-list-item > .check-icon-container > .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nft-list-item.selected > .check-icon-container {
+  border: 1px solid var(--paragraph-text-color);
+}
+.user-nft-selector > .loading-spinner {
+  margin: 20px;
+}
+.user-nft-selector-modal > main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 .persona-avatar {
   position: relative;
   background-color: var(--avatar-bg-color);
   border-radius: 50%;
 }
 .persona-avatar > img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1857,26 +1947,26 @@ li.chat-message-list-item > main {
   flex-direction: column;
   gap: 24px;
 }
-.persona-form > .avatar {
+.persona-form > .avatar-container {
   position: relative;
   height: 120px;
   display: flex;
   justify-content: center;
 }
-.persona-form > .avatar > .persona-avatar {
+.persona-form > .avatar-container > .avatar {
   width: 120px;
   height: 120px;
 }
-.persona-form > .avatar > button.edit {
+.persona-form > .avatar-container > button.edit {
   position: absolute;
   top: 0;
   right: 50%;
   transform: translate(calc(50% + 45px), 0);
   min-height: 32px;
 }
-.persona-form > .avatar > button.edit > .icon-container,
-.persona-form > .avatar > button.edit > .icon-container > .icon,
-.persona-form > .avatar > button.edit > .icon-container > .icon > svg {
+.persona-form > .avatar-container > button.edit > .icon-container,
+.persona-form > .avatar-container > button.edit > .icon-container > .icon,
+.persona-form > .avatar-container > button.edit > .icon-container > .icon > svg {
   width: 16px;
   height: 16px;
 }
@@ -1902,6 +1992,10 @@ li.chat-message-list-item > main {
     min-height: auto;
   }
 }
+.persona-form > .display-name-input-container > .select-name-buttons > button.selected {
+  background-color: var(--contained-button-bg-color);
+  color: var(--contained-button-text-color);
+}
 .create-persona-form > header {
   font-size: 32px;
   text-align: center;
@@ -1911,6 +2005,65 @@ li.chat-message-list-item > main {
 }
 .create-persona-form > footer > button {
   width: 100%;
+}
+.edit-persona-form > header {
+  font-size: 32px;
+  text-align: center;
+}
+.edit-persona-form > main {
+  padding: 80px 0 72px;
+}
+.edit-persona-form > footer > button {
+  width: 100%;
+}
+.name-selector-modal > main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.persona-display > header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.persona-display > header > .content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.persona-display > header > .content > .user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.persona-display > header > .content > .user-info > .name-and-wallet-address {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.persona-display > header > .content > .user-info > .name-and-wallet-address > .name {
+  font-size: 24px;
+}
+.persona-display > header > .content > .user-info > .name-and-wallet-address > .wallet-address {
+  font-size: 14px;
+}
+@container (width <= 520px) {
+  .persona-display > header > .content > .user-info > .pc-button-container {
+    display: none;
+  }
+}
+.persona-display > .mobile-button-container {
+  display: none;
+}
+@container (width <= 520px) {
+  .persona-display > .mobile-button-container {
+    display: flex;
+    gap: 8px;
+  }
+  .persona-display > .mobile-button-container > button {
+    flex-grow: 1;
+  }
 }
 .gaia-protocol-logo {
   display: flex;
