@@ -59,24 +59,24 @@ such as:
 ### 4. Enhanced Revenue for Gaia Personas
 
 Enjoy 200% increased revenue from transactions involving Gaia Personas,
-scheduled to launch in Q1 2024.
+scheduled to launch in Q1 2025.
 
 ### 5. Increased Revenue from topic.trade
 
-With the launch of topic.trade in Q1 2024, Shareholders of specific topics can
+With the launch of topic.trade in Q1 2025, Shareholders of specific topics can
 benefit from up to 200% boosted profit sharing, calculated based on the total
 Holding Points of all Shareholders participating in that topic.
 
 ### 6. Clan Operation Fund Support
 
-With the launch of Gaia Clans in Q1 2024, Holding Points can boost clan
+With the launch of Gaia Clans in Q1 2025, Holding Points can boost clan
 operation fund allocations by up to 200%, calculated from the total Holding
 Points of all clan members.
 
 ### 7. Access to Gaia Materials Airdrops
 
 Based on accumulated Holding Points, holders can participate in regular airdrop
-events for Gaia Materials, scheduled to launch in Q1 2024.
+events for Gaia Materials, scheduled to launch in Q1 2025.
 
 ## Continuous Value Expansion
 
