@@ -47,7 +47,8 @@ export function notice(slug: string) {
   return {
     title: notice?.title || "Not Found",
     description: notice?.subtitle,
-    coverImageURL: notice?.cover_image_url,
+    coverImageURL: notice?.coverImageURL,
+    coverVideoURL: notice?.coverVideoURL,
     html: notice
       ? el(
         ".notice-view",

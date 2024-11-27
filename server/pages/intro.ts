@@ -391,9 +391,24 @@ export function intro() {
               "a",
               {
                 style: {
-                  backgroundImage: `url(${notice.cover_image_url})`,
+                  backgroundImage: `url(${notice.coverImageURL})`,
                 },
               },
+              notice.coverVideoURL
+                ? el(
+                  "video",
+                  {
+                    autoplay: true,
+                    loop: true,
+                    muted: true,
+                    playsInline: true,
+                  },
+                  el("source", {
+                    src: notice.coverVideoURL,
+                    type: "video/mp4",
+                  }),
+                )
+                : undefined,
               el(
                 ".content",
                 el(

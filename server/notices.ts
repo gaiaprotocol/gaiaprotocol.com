@@ -4,7 +4,8 @@ interface Notice {
   title: string;
   subtitle: string;
   content: string;
-  cover_image_url: string;
+  coverImageURL: string;
+  coverVideoURL?: string;
   created_at: string;
 }
 
@@ -12,6 +13,7 @@ async function exportNoticeFromMarkdown(
   slug: string,
   category: string,
   coverImageURL: string,
+  coverVideoURL: string | undefined,
   createdAt: string,
 ) {
   const markdownContent = await Deno.readTextFile(
@@ -43,13 +45,20 @@ async function exportNoticeFromMarkdown(
     title,
     subtitle,
     content,
-    cover_image_url: coverImageURL,
+    coverImageURL,
+    coverVideoURL,
     created_at: createdAt,
   };
 }
 
 export const notices: Notice[] = await Promise.all(
   [{
+    slug: "introducing-the-gods-nft",
+    category: "announcement",
+    coverImageURL: "https://common-resources.gaia.cc/covers/thegods.jpg",
+    coverVideoURL: "https://common-resources.gaia.cc/covers/thegods.mp4",
+    createdAt: "2024-11-27",
+  }, {
     slug: "introducing-gaia-protocol",
     category: "announcement",
     coverImageURL: "https://common-resources.gaia.cc/covers/gaiaprotocol.jpg",
@@ -59,6 +68,7 @@ export const notices: Notice[] = await Promise.all(
       data.slug,
       data.category,
       data.coverImageURL,
+      data.coverVideoURL,
       data.createdAt,
     )
   ),
