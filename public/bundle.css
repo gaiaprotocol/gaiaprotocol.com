@@ -119,14 +119,12 @@ meter {
   font-weight: 700;
   font-display: swap;
 }
-/*
 @font-face {
   font-family: 'Trajan Pro';
-  font-style : normal;
+  font-style: normal;
   font-weight: normal;
-  src        : url("https://common-resources.gaia.cc/fonts/trajan-pro.woff") format("woff");
+  src: url("https://common-resources.gaia.cc/fonts/trajan-pro.woff") format("woff");
 }
-*/
 @keyframes rotate-material-loading-spinner {
   0% {
     transform: rotate(0deg);
@@ -2164,6 +2162,7 @@ li.chat-message-list-item > main {
 .intro-view > section.hero > .content > h1 {
   font-size: 54px;
   text-align: center;
+  font-family: 'Trajan Pro';
 }
 @container (width <= 520px) {
   .intro-view > section.hero > .content > h1 {
