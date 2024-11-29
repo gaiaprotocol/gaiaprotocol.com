@@ -2160,12 +2160,13 @@ li.chat-message-list-item > main {
   padding: 0 20px;
 }
 .intro-view > section.hero > .content > h1 {
-  font-size: 54px;
+  font-size: 48px;
   text-align: center;
+  font-family: 'Trajan Pro';
 }
 @container (width <= 520px) {
   .intro-view > section.hero > .content > h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 .intro-view > section.hero > .content > p {
