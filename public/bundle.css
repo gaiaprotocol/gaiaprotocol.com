@@ -2162,7 +2162,6 @@ li.chat-message-list-item > main {
 .intro-view > section.hero > .content > h1 {
   font-size: 54px;
   text-align: center;
-  font-family: 'Trajan Pro';
 }
 @container (width <= 520px) {
   .intro-view > section.hero > .content > h1 {
