@@ -2166,7 +2166,7 @@ li.chat-message-list-item > main {
 }
 @container (width <= 520px) {
   .intro-view > section.hero > .content > h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 .intro-view > section.hero > .content > p {
