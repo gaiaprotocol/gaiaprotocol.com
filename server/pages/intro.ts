@@ -308,7 +308,40 @@ export function intro() {
         ),
       ),
     ),
-    el("section.games", el("h2", "Games")),
+    el(
+      "section.games",
+      el("h2", "Games"),
+      el(
+        "ul",
+        el(
+          "li",
+          el(
+            "a",
+            {
+              style: {
+                backgroundImage:
+                  "url('https://common-resources.gaia.cc/covers/gaiawar.jpg')",
+              },
+            },
+            el(
+              ".content",
+              el("header", el("h3", "Gaia War"), comingSoon),
+              el(
+                "main",
+                el(
+                  "p",
+                  "A fully-onchain strategy game.",
+                ),
+              ),
+            ),
+            {
+              href: "https://gaiawar.com",
+              target: "_blank",
+            },
+          ),
+        ),
+      ),
+    ),
     el(
       "section.tokens",
       el("h2", "Tokens"),
