@@ -37,3 +37,6 @@ cache
 artifacts
 typechain*
 .openzeppelin
+
+# deno
+deno.lock
