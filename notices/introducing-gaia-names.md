@@ -2,7 +2,7 @@
 
 ## Digital Identity System of Gaia Protocol
 
-![Gaia Names](https://common-resources.gaia.cc/covers/gaia-names.png)
+![Gaia Names](https://common-resources.gaia.cc/banners/gaia-names.png)
 
 Gaia Names is a unique naming service available within the Gaia Protocol
 ecosystem, exclusively offered as a special benefit to God Mode holders who meet
