@@ -53,6 +53,11 @@ async function exportNoticeFromMarkdown(
 
 export const notices: Notice[] = await Promise.all(
   [{
+    slug: "introducing-gaia-names",
+    category: "announcement",
+    coverImageURL: "https://common-resources.gaia.cc/covers/gaia-names.png",
+    createdAt: "2025-01-21",
+  }, {
     slug: "introducing-the-gods-nft",
     category: "announcement",
     coverImageURL: "https://common-resources.gaia.cc/covers/thegods.jpg",
