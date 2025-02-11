@@ -19,10 +19,7 @@ export function header() {
 export function footer() {
   return el(
     "footer",
-    el(
-      ".credit",
-      "Created by Gaia Protocol",
-    ),
+    el(".credit", "2022-", String(new Date().getFullYear()), " Gaia Protocol"),
     el(
       ".social",
       el(
