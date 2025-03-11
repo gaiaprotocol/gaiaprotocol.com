@@ -8,8 +8,7 @@ export function header() {
     el(
       ".buttons",
       el("a.button.contained", "Dashboard", {
-        href: "https://dashboard.gaia.cc",
-        target: "_blank",
+        href: "https://dashboard.gaiaprotocol.com",
       }),
     ),
   );
@@ -19,6 +18,12 @@ export function footer() {
   return el(
     "footer",
     el(".credit", "2022-", String(new Date().getFullYear()), " Gaia Protocol"),
+    el(
+      ".links",
+      el("a", "Docs", {
+        href: "https://docs.gaiaprotocol.com",
+      }),
+    ),
     el(
       ".social",
       el(
