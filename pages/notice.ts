@@ -1,6 +1,6 @@
 import { marked, Tokens } from "https://deno.land/x/marked@1.0.2/mod.ts";
 import { el } from "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts";
-import { notices } from "../notices.ts";
+import { notices } from "../server/notices.ts";
 
 function format(date: Date) {
   return new Intl.DateTimeFormat(

@@ -3,9 +3,9 @@ import {
   createPage,
   el,
 } from "https://raw.githubusercontent.com/yjgaia/deno-module/refs/heads/main/page.ts";
-import { layout } from "./pages/layout.ts";
-import { notice } from "./pages/notice.ts";
-import { intro } from "./pages/intro.ts";
+import { layout } from "../pages/layout.ts";
+import { notice } from "../pages/notice.ts";
+import { intro } from "../pages/intro.ts";
 
 UniversalEl.impl = el;
 html.impl = (htmlContent) => htmlContent;
