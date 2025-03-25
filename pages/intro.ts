@@ -335,8 +335,9 @@ export function intro() {
               ),
             ),
             {
-              href: "https://gaiawar.com",
-              target: "_blank",
+              //href: "https://war.gaia.cc",
+              //target: "_blank",
+              onclick: "alert('Coming soon!')",
             },
           ),
         ),

@@ -77,7 +77,8 @@
     "scripts",
     "legacy",
     "public",
-    "server"
+    "server",
+    "pages"
   ],
   "ts-node": {
     "transpileOnly": true,
