@@ -1112,6 +1112,13 @@ dialog.modal.quantity-input-dialog > main {
 .markdown-document s {
   text-decoration: line-through;
 }
+.markdown-document ul {
+  list-style: disc;
+  padding-left: 16px;
+}
+.markdown-document ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
 .rich-text-editor-more-menu > main > .dropdown-menu-group {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));

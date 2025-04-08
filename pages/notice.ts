@@ -58,7 +58,7 @@ export function notice(slug: string) {
           el("h1", notice.title),
           notice.subtitle ? el("h2", notice.subtitle) : undefined,
         ),
-        el("main.markdown-body", marked(notice.content)),
+        el("main.markdown-document", marked(notice.content)),
       )
       : el(".notice-view", "Not Found"),
   };
