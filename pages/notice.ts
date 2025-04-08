@@ -56,7 +56,7 @@ export function notice(slug: string) {
           "header",
           el(".date", format(new Date(notice.created_at))),
           el("h1", notice.title),
-          el("h2", notice.subtitle),
+          notice.subtitle ? el("h2", notice.subtitle) : undefined,
         ),
         el("main.markdown-body", marked(notice.content)),
       )

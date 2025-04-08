@@ -2,7 +2,7 @@ interface Notice {
   slug: string;
   category: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   content: string;
   coverImageURL: string;
   coverVideoURL?: string;
@@ -21,7 +21,7 @@ async function exportNoticeFromMarkdown(
   );
   const lines = markdownContent.split("\n");
   let title = "";
-  let subtitle = "";
+  let subtitle;
   let contentStart = 0;
 
   for (let i = 0; i < lines.length; i++) {
@@ -30,7 +30,7 @@ async function exportNoticeFromMarkdown(
       contentStart = i + 1;
       continue;
     }
-    if (!subtitle && lines[i].startsWith("## ")) {
+    if (!subtitle && i === 2 && lines[i].startsWith("## ")) {
       subtitle = lines[i].replace("## ", "").trim();
       contentStart = i + 1;
       break;
@@ -53,6 +53,11 @@ async function exportNoticeFromMarkdown(
 
 export const notices: Notice[] = await Promise.all(
   [{
+    slug: "dashboard-launch",
+    category: "announcement",
+    coverImageURL: "https://gaiaprotocol.com/notice-covers/dashboard.png",
+    createdAt: "2025-04-08",
+  }, {
     slug: "introducing-gaia-names",
     category: "announcement",
     coverImageURL: "https://common-resources.gaia.cc/covers/gaia-names.png",

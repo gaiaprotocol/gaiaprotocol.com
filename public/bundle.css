@@ -1356,6 +1356,47 @@ li.chat-content-list-item.temp {
     font-size: 16px;
   }
 }
+/* Dashboard Components */
+.the-gods-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+.the-gods-dashboard > section > h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.the-gods-dashboard > section.stats > .content {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@container (width <= 520px) {
+  .the-gods-dashboard > section.stats > .content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.the-gods-dashboard > section.stats > .content > .loading-spinner {
+  width: 24px;
+  height: 24px;
+}
+.the-gods-dashboard > section.stats > .content > .stat {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 16px;
+}
+.the-gods-dashboard > section.stats > .content > .stat > .value {
+  font-size: 24px;
+  font-weight: bold;
+}
+.the-gods-dashboard > section.stats > .content > .stat > .label {
+  font-size: 16px;
+  color: #aaa;
+}
+.the-gods-dashboard > section.graph > .the-gods-graph {
+  margin-top: 24px;
+}
 /* Gaia Components */
 .logo-input {
   position: relative;
