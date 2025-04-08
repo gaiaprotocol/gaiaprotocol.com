@@ -1,5 +1,7 @@
 # Gaia Protocol Dashboard Launched
 
+![Gaia Protocol Dashboard](https://gaiaprotocol.com/notice-covers/dashboard.png)
+
 The Gaia Protocol Dashboard has been launched!
 
 You can now access the dashboard via the **"Dashboard"** button located at the
