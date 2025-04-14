@@ -344,8 +344,8 @@ export function intro() {
       ),
     ),
     el(
-      "section.tokens",
-      el("h2", "Tokens"),
+      "section.assets",
+      el("h2", "Assets"),
       el(
         "ul",
         el(
