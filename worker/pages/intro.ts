@@ -64,7 +64,7 @@ function protocolCards() {
       cardLink(
         { href: it.url, target: '_blank', rel: 'noopener noreferrer' },
         h(
-          'sl-card.bg-gray-900/40.backdrop-blur',
+          'sl-card.bg-gray-900/40.backdrop-blur.w-full',
           { class: 'hover:translate-y-[-2px] transition-transform duration-200' },
           h('img', { slot: 'image', src: it.cover, alt: it.title, class: 'object-cover h-48 w-full' }),
           h('div.flex.items-start.justify-between',
@@ -75,7 +75,7 @@ function protocolCards() {
             h('sl-icon.text-gray-300', { name: 'box-arrow-up-right' })
           ),
           h(
-            'div[slot=footer].flex.justify-between.items-center',
+            'div[slot=footer].flex.justify-between.items-center.mt-2',
             h('sl-badge.pulse', { variant: 'neutral' }, 'Protocol'),
             h('sl-button', { variant: 'primary', size: 'small' }, 'View on GitHub')
           )
@@ -123,14 +123,12 @@ function appsCards() {
     'div.grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-6',
     ...items.map((it) => {
       const cardCore = h(
-        'sl-card.bg-gray-900/40.backdrop-blur',
+        'sl-card.bg-gray-900/40.backdrop-blur.w-full',
         { class: 'hover:translate-y-[-2px] transition-transform duration-200' },
-        h('div.relative',
-          h('img', { slot: 'image', src: it.cover, alt: it.title, class: 'object-cover h-48 w-full opacity-80' }),
-          it.soon
-            ? h('sl-badge.absolute.top-3.right-3', { variant: 'warning', pill: true }, 'Coming soon')
-            : ''
-        ),
+        h('img', { slot: 'image', src: it.cover, alt: it.title, class: 'object-cover h-48 w-full opacity-80' }),
+        it.soon
+          ? h('sl-badge.absolute.top-3.right-3', { variant: 'warning', pill: true }, 'Coming soon')
+          : '',
         h('div.flex.items-start.justify-between',
           h('div',
             h('div.text-lg.font-semibold.text-white', it.title),
@@ -139,7 +137,7 @@ function appsCards() {
           it.soon ? h('sl-icon.text-yellow-400', { name: 'clock' }) : h('sl-icon.text-blue-400', { name: 'box-arrow-up-right' })
         ),
         h(
-          'div[slot=footer].flex.justify-end',
+          'div[slot=footer].flex.justify-end.mt-2',
           it.soon
             ? h('sl-button', { variant: 'neutral', size: 'small', onclick: "alert('Coming soon!')" }, 'Notify me')
             : h('sl-button', { variant: 'primary', size: 'small' }, 'Open')
@@ -169,10 +167,8 @@ function gamesCards() {
       h(
         'sl-card.bg-gray-900/40.backdrop-blur',
         { class: 'hover:translate-y-[-2px] transition-transform duration-200' },
-        h('div.relative',
-          h('img', { slot: 'image', src: it.cover, alt: it.title, class: 'object-cover h-48 w-full opacity-80' }),
-          it.soon ? h('sl-badge.absolute.top-3.right-3', { variant: 'warning', pill: true }, 'Coming soon') : ''
-        ),
+        h('img', { slot: 'image', src: it.cover, alt: it.title, class: 'object-cover h-48 w-full opacity-80' }),
+        it.soon ? h('sl-badge.absolute.top-3.right-3', { variant: 'warning', pill: true }, 'Coming soon') : '',
         h('div.flex.items-start.justify-between',
           h('div',
             h('div.text-lg.font-semibold.text-white', it.title),
@@ -180,7 +176,7 @@ function gamesCards() {
           ),
           h('sl-icon.text-yellow-400', { name: 'controller' })
         ),
-        h('div[slot=footer].flex.justify-end',
+        h('div[slot=footer].flex.justify-end.mt-2',
           h('sl-button', { variant: 'neutral', size: 'small', onclick: "alert('Coming soon!')" }, 'Details')
         )
       )
@@ -201,7 +197,7 @@ function assetsCards() {
       desc: 'A membership NFT collection of Gaia Protocol consisting of 3,333 NFTs.',
       cover: 'https://common-resources.gaia.cc/covers/thegods.jpg',
       video: 'https://common-resources.gaia.cc/covers/thegods.mp4',
-      url: 'https://thegods.gaia.cc'
+      url: 'https://gods.gaia.cc'
     }
   ];
 
@@ -214,24 +210,22 @@ function assetsCards() {
           'sl-card.bg-gray-900/40.backdrop-blur',
           { class: 'hover:translate-y-[-2px] transition-transform duration-200' },
           it.video
-            ? h('div.relative',
-              h('video', {
-                slot: 'image',
-                autoplay: true,
-                loop: true,
-                muted: true,
-                playsinline: true,
-                class: 'h-48 w-full object-cover opacity-80'
-              },
-                h('source', { src: it.video, type: 'video/mp4' })
-              )
+            ? h('video', {
+              slot: 'image',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              playsinline: true,
+              class: 'h-48 w-full object-cover opacity-80'
+            },
+              h('source', { src: it.video, type: 'video/mp4' })
             )
             : h('img', { slot: 'image', src: it.cover, alt: it.title, class: 'object-cover h-48 w-full' }),
           h('div',
             h('div.text-lg.font-semibold.text-white', it.title),
             h('div.text-sm.text-gray-300.mt-1', it.desc)
           ),
-          h('div[slot=footer].flex.justify-between.items-center',
+          h('div[slot=footer].flex.justify-between.items-center.mt-2',
             h('sl-badge', { variant: 'success' }, 'Live'),
             h('sl-button', { variant: 'primary', size: 'small' }, 'Open')
           )
@@ -262,10 +256,10 @@ function newsCards(notices: Notice[]) {
             ),
             h('div.text-base.font-semibold.text-white.line-clamp-2', n.title),
             n.content
-              ? h('div.text-sm.text-gray-300.line-clamp-2', n.content)
+              ? h('div.text-sm.text-gray-300.line-clamp-2', n.content.replace(/#/g, ''))
               : ''
           ),
-          h('div[slot=footer].flex.justify-end',
+          h('div[slot=footer].flex.justify-end.mt-2',
             h('sl-button', { variant: 'default', size: 'small' }, 'Read more')
           )
         )
@@ -277,21 +271,19 @@ function newsCards(notices: Notice[]) {
 function hero() {
   return h(
     'section.relative.h-[80vh].min-h-[560px].flex.items-center.justify-center.overflow-hidden',
-    h('div.absolute.inset-0.bg-gradient-to-b.from-transparent.via-black/40.to-black'),
     h('video.absolute.inset-0.w-full.h-full.object-cover', { autoplay: true, loop: true, muted: true, playsinline: true },
       h('source', { src: 'https://common-resources.gaia.cc/hero/hero.mp4', type: 'video/mp4' })
     ),
     h('div.relative.z-10.text-center.max-w-3xl.px-6.space-y-6',
-      h('h1.text-5xl.md:text-7xl.font-extrabold.text-white', 'Gaia Protocol'),
-      h('p.text-lg.md:text-2xl.text-gray-300',
-        'The Web3 protocol for social and gaming.'
-      ),
+      h('h1.text-5xl.md:text-7xl.text-white.drop-shadow-lg.font-trojan-pro', 'Gaia Protocol'),
+      h('p.text-lg.md:text-2xl.text-gray-300.drop-shadow', 'Web3 Social + Gaming Protocol'),
       h('div.flex.justify-center.space-x-3',
         h('a', { href: '/notice/1' },
           h('sl-button', { variant: 'primary', size: 'large' }, 'Learn more')
         ),
       )
-    )
+    ),
+    h('div.absolute.inset-0.bg-gradient-to-b.from-transparent.via-black/40.to-black'),
   );
 }
 
@@ -302,7 +294,7 @@ function container(section: any) {
 function intro(notices: Notice[]) {
   return '<!DOCTYPE html>' + h(
     'html.dark', { lang: 'en' },
-    head('Gaia Protocol - The Web3 Protocol for Social and Gaming'),
+    head('Gaia Protocol - Web3 Social + Gaming Protocol'),
     h(
       'body.bg-gray-950.text-gray-200.sl-theme-dark',
       top,
