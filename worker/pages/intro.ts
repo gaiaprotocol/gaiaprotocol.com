@@ -335,8 +335,8 @@ function intro(notices: Notice[]) {
       )),
 
       // News
-      h('section.py-16', container(
-        h('div#news',
+      h('section#news.py-16', container(
+        h('div',
           sectionTitle('News', 'Updates, releases, and community highlights.'),
           newsCards(notices)
         )
