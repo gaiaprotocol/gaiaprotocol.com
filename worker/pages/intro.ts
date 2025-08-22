@@ -250,32 +250,20 @@ function newsCards(notices: Notice[]) {
     'div.grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-6',
     ...notices.map((n) =>
       cardLink(
-        { href: `/${n.slug}` },
+        { href: `/notice/${n.id}` },
         h(
           'sl-card.bg-gray-900/40.backdrop-blur',
           { class: 'hover:translate-y-[-2px] transition-transform duration-200 h-full' },
-          n.coverVideoURL
-            ? h('div.relative',
-              h('video', {
-                slot: 'image',
-                autoplay: true,
-                loop: true,
-                muted: true,
-                playsinline: true,
-                class: 'h-48 w-full object-cover opacity-80'
-              },
-                h('source', { src: n.coverVideoURL, type: 'video/mp4' })
-              )
-            )
-            : h('img', { slot: 'image', src: n.coverImageURL, alt: n.title, class: 'object-cover h-48 w-full' }),
           h('div.space-y-2',
             h('div.flex.items-center.space-x-2.text-xs',
-              h('sl-badge', { variant: 'primary', pill: true }, n.category),
+              h('sl-badge', { variant: 'primary', pill: true }, 'News'),
               h('span.text-gray-400', '•'),
               h('span.text-gray-400', formatDate(n.createdAt))
             ),
             h('div.text-base.font-semibold.text-white.line-clamp-2', n.title),
-            n.content ? h('div.text-sm.text-gray-300.line-clamp-2', n.content) : ''
+            n.content
+              ? h('div.text-sm.text-gray-300.line-clamp-2', n.content)
+              : ''
           ),
           h('div[slot=footer].flex.justify-end',
             h('sl-button', { variant: 'default', size: 'small' }, 'Read more')
@@ -356,7 +344,7 @@ function intro(notices: Notice[]) {
 
       // News
       h('section.py-16', container(
-        h('div',
+        h('div#news',
           sectionTitle('News', 'Updates, releases, and community highlights.'),
           newsCards(notices)
         )
