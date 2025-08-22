@@ -287,7 +287,7 @@ function hero() {
         'The Web3 protocol for social and gaming.'
       ),
       h('div.flex.justify-center.space-x-3',
-        h('a', { href: '/introducing-gaia-protocol' },
+        h('a', { href: '/notice/1' },
           h('sl-button', { variant: 'primary', size: 'large' }, 'Learn more')
         ),
       )
