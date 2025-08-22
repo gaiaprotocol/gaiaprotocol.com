@@ -25,7 +25,7 @@ const top = h(
           target: '_blank',
           rel: 'noopener noreferrer'
         },
-        h('sl-button', { variant: 'primary', size: 'small' }, 'Dashboard')
+        //h('sl-button', { variant: 'primary', size: 'small' }, 'Dashboard')
       )
     )
   ),
