@@ -14,7 +14,7 @@ function dashboard() {
       h(
         'body.bg-gray-950.text-gray-200.sl-theme-dark',
         top,
-        h('main#dashboard-container.mx-auto.max-w-7xl.px-4'),
+        h('main#dashboard-container.mx-auto.max-w-7xl.px-4.py-6'),
         footer,
         bundle
       )
