@@ -9,6 +9,9 @@
   "test": "vitest",
   "cf-typegen": "wrangler types"
  },
+ "dependencies": {
+  "@gaiaprotocol/god-mode-client": "^0.0.1"
+ },
  "devDependencies": {
   "@cloudflare/vitest-pool-workers": "^0.8.65",
   "@gaiaprotocol/worker-common": "^0.0.20",

@@ -35,12 +35,8 @@ const top = h(
       'div.flex.items-center.space-x-3',
       h(
         'a',
-        {
-          href: 'https://dashboard.gaiaprotocol.com',
-          target: '_blank',
-          rel: 'noopener noreferrer'
-        },
-        //h('sl-button', { variant: 'primary', size: 'small' }, 'Dashboard')
+        { href: '/dashboard' },
+        h('sl-button', { variant: 'primary', size: 'small' }, 'Dashboard')
       )
     )
   ),
