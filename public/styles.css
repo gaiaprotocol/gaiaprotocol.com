@@ -1,8 +1,5 @@
-.gaia-dashboard .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  /* horizontal gutter like top */
-  box-sizing: border-box;
+.gaia-dashboard {
+  padding: 20px;
 }
 
 .gaia-dashboard .header {
@@ -49,8 +46,12 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 15px;
+
+  >h3 {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0;
+  }
 }
 .gods-stats-dash sl-card::part(base) {
   background: var(--sl-color-neutral-0);
@@ -1894,4 +1895,9 @@ sl-spinner {
 .font-trojan-pro {
   margin-top: 4px;
   font-family: 'Trajan Pro';
+}
+
+.gaia-dashboard {
+  margin-top: 24px;
+  padding: 0;
 }
