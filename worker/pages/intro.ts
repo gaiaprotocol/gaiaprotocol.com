@@ -35,25 +35,25 @@ function protocolCards() {
     {
       title: 'Material Factory',
       desc: 'An ERC-20 based system for tokenizing game resources with automated pricing based on supply and demand.',
-      cover: 'https://common-resources.gaia.cc/covers/material-factory.jpg',
+      cover: '/images/covers/material-factory.jpg',
       url: 'https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/gaming/MaterialFactory.sol',
     },
     {
       title: 'Topic Shares',
       desc: 'A tokenized system for subject-based participation where share holders receive fees and influence decisions.',
-      cover: 'https://common-resources.gaia.cc/covers/topic-shares.jpg',
+      cover: '/images/covers/topic-shares.jpg',
       url: 'https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/TopicShares.sol',
     },
     {
       title: 'Clan Emblems',
       desc: 'Digital insignia representing community membership; trading fees contribute to clan operations.',
-      cover: 'https://common-resources.gaia.cc/covers/clan-emblems.jpg',
+      cover: '/images/covers/clan-emblems.jpg',
       url: 'https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/ClanEmblems.sol',
     },
     {
       title: 'Persona Fragments',
       desc: 'Tokenizes digital identity & relationships; users connect via fragment ownership.',
-      cover: 'https://common-resources.gaia.cc/covers/persona-fragments.jpg',
+      cover: '/images/covers/persona-fragments.jpg',
       url: 'https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/PersonaFragments.sol',
     },
   ];
@@ -90,31 +90,31 @@ function appsCards() {
     {
       title: 'Gaia Materials',
       desc: 'A platform for trading Web3 gaming resources as ERC-20 tokens.',
-      cover: 'https://common-resources.gaia.cc/covers/gaia-materials.jpg',
+      cover: '/images/covers/gaia-materials.jpg',
       soon: true
     },
     {
       title: 'topic.trade',
       desc: 'Trade topics; holders share fees and govern posting channels.',
-      cover: 'https://common-resources.gaia.cc/covers/topictrade.jpg',
+      cover: '/images/covers/topictrade.jpg',
       soon: true
     },
     {
       title: 'Gaia Clans',
       desc: 'Create clans, join via passes, fund ops via trading fees.',
-      cover: 'https://common-resources.gaia.cc/covers/gaia-clans.jpg',
+      cover: '/images/covers/gaia-clans.jpg',
       soon: true
     },
     {
       title: 'Gaia Personas',
       desc: 'Express Web3 identity via tradable personas and earn from fees.',
-      cover: 'https://common-resources.gaia.cc/covers/gaia-personas.jpg',
+      cover: '/images/covers/gaia-personas.jpg',
       soon: true
     },
     {
       title: 'Gaia Names',
       desc: 'A naming system for the Gaia ecosystem.',
-      cover: 'https://common-resources.gaia.cc/covers/gaia-names.png',
+      cover: '/images/covers/gaia-names.png',
       url: 'https://names.gaia.cc'
     }
   ];
@@ -156,7 +156,7 @@ function gamesCards() {
     {
       title: 'Gaia War',
       desc: 'A fully-onchain strategy game.',
-      cover: 'https://common-resources.gaia.cc/covers/gaiawar.jpg',
+      cover: '/images/covers/gaiawar.jpg',
       soon: true
     }
   ];
@@ -189,14 +189,14 @@ function assetsCards() {
     {
       title: '$GAIA',
       desc: 'A membership token providing various benefits across the Gaia ecosystem.',
-      cover: 'https://common-resources.gaia.cc/covers/token.jpg',
+      cover: '/images/covers/token.jpg',
       url: 'https://token.gaia.cc'
     },
     {
       title: 'The Gods',
       desc: 'A membership NFT collection of Gaia Protocol consisting of 3,333 NFTs.',
-      cover: 'https://common-resources.gaia.cc/covers/thegods.jpg',
-      video: 'https://common-resources.gaia.cc/covers/thegods.mp4',
+      cover: '/images/covers/thegods.jpg',
+      video: '/images/covers/thegods.mp4',
       url: 'https://gods.gaia.cc'
     }
   ];
@@ -272,7 +272,7 @@ function hero() {
   return h(
     'section.relative.h-[80vh].min-h-[560px].flex.items-center.justify-center.overflow-hidden',
     h('video.absolute.inset-0.w-full.h-full.object-cover', { autoplay: true, loop: true, muted: true, playsinline: true },
-      h('source', { src: 'https://common-resources.gaia.cc/hero/hero.mp4', type: 'video/mp4' })
+      h('source', { src: '/videos/hero.mp4', type: 'video/mp4' })
     ),
     h('div.relative.z-10.text-center.max-w-3xl.px-6.space-y-6',
       h('h1.text-5xl.md:text-7xl.text-white.drop-shadow-lg.font-trojan-pro', 'Gaia Protocol'),
