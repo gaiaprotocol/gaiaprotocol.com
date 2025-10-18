@@ -114,7 +114,7 @@ function tagsRow(n: Notice) {
 }
 
 function contentBlock(n: Notice) {
-  const html = n.content ? marked.parse(n.content) : '';
+  const html = n.content ? marked.parse(n.content) as string : '';
 
   return h(
     'article',
