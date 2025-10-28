@@ -129,8 +129,20 @@ function breadcrumb(n: Notice) {
       'sl-breadcrumb',
       { class: 'text-sm' },
       h('sl-breadcrumb-item', { href: '/' }, 'Home'),
-      h('sl-breadcrumb-item', { href: '/#news' }, 'Notices'),
-      h('sl-breadcrumb-item', { active: true }, n.title || 'Notice')
+      h('sl-breadcrumb-item', { href: '/#news' }, 'News'),
+      h(
+        'sl-breadcrumb-item',
+        {
+          active: true,
+          style: {
+            maxWidth: '200px',          // 길이 제한
+            overflow: 'hidden',         // 넘치는 텍스트 숨김
+            whiteSpace: 'nowrap',       // 한 줄 유지
+            textOverflow: 'ellipsis'    // 말줄임 표시
+          }
+        },
+        n.title || 'Notice'
+      )
     )
   );
 }
@@ -140,7 +152,7 @@ function shareRow(n: Notice) {
     'div.mt-8.flex.items-center.justify-between',
     h(
       'div.flex.items-center.gap-2',
-      h('sl-button', { href: '/#news', variant: 'default' }, '← Back to Notices')
+      h('sl-button', { href: '/#news', variant: 'default' }, '← Back to News')
     ),
     h(
       'div.flex.items-center.gap-2',
