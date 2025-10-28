@@ -17,6 +17,15 @@ function formatDate(date: string | number) {
   }
 }
 
+function typeMeta(t?: string) {
+  const v = (t || '').toLowerCase();
+  if (v === 'update') return { label: 'Update', variant: 'success' as const };
+  if (v === 'news') return { label: 'News', variant: 'primary' as const };
+  // 그 외 값은 첫 글자만 대문자로 표시
+  const pretty = v ? v.charAt(0).toUpperCase() + v.slice(1) : 'Notice';
+  return { label: pretty, variant: 'neutral' as const };
+}
+
 function sectionTitle(title: string, subtitle?: string) {
   return h(
     'div.flex.flex-col.items-center.text-center.space-y-2.mb-8',
@@ -242,15 +251,17 @@ function newsCards(notices: Notice[]) {
 
   return h(
     'div.grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-6',
-    ...notices.map((n) =>
-      cardLink(
+    ...notices.map((n) => {
+      const tm = typeMeta((n as any).type);
+
+      return cardLink(
         { href: `/notice/${n.id}` },
         h(
           'sl-card.bg-gray-900/40.backdrop-blur',
           { class: 'hover:translate-y-[-2px] transition-transform duration-200 h-full' },
           h('div.space-y-2',
             h('div.flex.items-center.space-x-2.text-xs',
-              h('sl-badge', { variant: 'primary', pill: true }, 'News'),
+              h('sl-badge', { variant: tm.variant, pill: true }, tm.label),
               h('span.text-gray-400', '•'),
               h('span.text-gray-400', formatDate(n.createdAt))
             ),
@@ -263,8 +274,8 @@ function newsCards(notices: Notice[]) {
             h('sl-button', { variant: 'default', size: 'small' }, 'Read more')
           )
         )
-      )
-    )
+      );
+    })
   );
 }
 
