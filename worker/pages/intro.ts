@@ -148,7 +148,7 @@ function appsCards() {
         h(
           'div[slot=footer].flex.justify-end.mt-2',
           it.soon
-            ? h('sl-button', { variant: 'neutral', size: 'small', onclick: "alert('Coming soon!')" }, 'Notify me')
+            ? h('sl-button', { variant: 'neutral', size: 'small', disabled: true }, 'Coming soon')
             : h('sl-button', { variant: 'primary', size: 'small' }, 'Open')
         )
       );
@@ -186,7 +186,7 @@ function gamesCards() {
           h('sl-icon.text-yellow-400', { name: 'controller' })
         ),
         h('div[slot=footer].flex.justify-end.mt-2',
-          h('sl-button', { variant: 'neutral', size: 'small', onclick: "alert('Coming soon!')" }, 'Details')
+          h('sl-button', { variant: 'neutral', size: 'small', disabled: true }, 'Coming soon')
         )
       )
     )
