@@ -118,7 +118,8 @@ function appsCards() {
       title: 'Gaia Personas',
       desc: 'Express Web3 identity via tradable personas and earn from fees.',
       cover: '/images/covers/gaia-personas.jpg',
-      soon: true
+      url: 'https://personas.gaia.cc',
+      testnet: 'https://testnet.valhalla.gaia.cc'
     },
     {
       title: 'Gaia Names',
@@ -146,10 +147,15 @@ function appsCards() {
           it.soon ? h('sl-icon.text-yellow-400', { name: 'clock' }) : h('sl-icon.text-blue-400', { name: 'box-arrow-up-right' })
         ),
         h(
-          'div[slot=footer].flex.justify-end.mt-2',
-          it.soon
-            ? h('sl-button', { variant: 'neutral', size: 'small', disabled: true }, 'Coming soon')
-            : h('sl-button', { variant: 'primary', size: 'small' }, 'Open')
+          'div[slot=footer].flex.justify-end.gap-2.mt-2',
+          ...(it.soon
+            ? [h('sl-button', { variant: 'neutral', size: 'small', disabled: true }, 'Coming soon')]
+            : (it.testnet
+              ? [
+                h('sl-button', { variant: 'neutral', size: 'small', href: it.testnet, target: '_blank', onclick: 'event.stopPropagation()' }, 'Testnet'),
+                h('sl-button', { variant: 'primary', size: 'small' }, 'Open')
+              ]
+              : [h('sl-button', { variant: 'primary', size: 'small' }, 'Open')]))
         )
       );
 
