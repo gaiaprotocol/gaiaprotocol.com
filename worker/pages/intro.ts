@@ -257,38 +257,52 @@ function assetsCards() {
   );
 }
 
+const MAX_NEWS_ON_MAIN = 3;
+
 function newsCards(notices: Notice[]) {
   if (!Array.isArray(notices) || notices.length === 0) {
-    return h('div.text-gray-400.text-sm', 'No news yet. Stay tuned!');
+    return h('div.text-gray-400.text-sm', 'No notices yet. Stay tuned!');
   }
 
-  return h(
-    'div.grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-6',
-    ...notices.map((n) => {
-      const tm = typeMeta((n as any).type);
+  const displayNotices = notices.slice(0, MAX_NEWS_ON_MAIN);
+  const hasMore = notices.length > MAX_NEWS_ON_MAIN;
 
-      return cardLink(
-        { href: `/notice/${n.id}` },
-        h(
-          'sl-card.bg-gray-900/40.backdrop-blur',
-          { class: 'hover:translate-y-[-2px] transition-transform duration-200 h-full' },
-          h('div.space-y-2',
-            h('div.flex.items-center.space-x-2.text-xs',
-              h('sl-badge', { variant: tm.variant, pill: true }, tm.label),
-              h('span.text-gray-400', '•'),
-              h('span.text-gray-400', formatDate(n.createdAt))
+  return h(
+    'div',
+    h(
+      'div.grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-6',
+      ...displayNotices.map((n) => {
+        const tm = typeMeta((n as any).type);
+
+        return cardLink(
+          { href: `/notice/${n.id}` },
+          h(
+            'sl-card.bg-gray-900/40.backdrop-blur',
+            { class: 'hover:translate-y-[-2px] transition-transform duration-200 h-full' },
+            h('div.space-y-2',
+              h('div.flex.items-center.space-x-2.text-xs',
+                h('sl-badge', { variant: tm.variant, pill: true }, tm.label),
+                h('span.text-gray-400', '•'),
+                h('span.text-gray-400', formatDate(n.createdAt))
+              ),
+              h('div.text-base.font-semibold.text-white.line-clamp-2', n.title),
+              n.content
+                ? h('div.text-sm.text-gray-300.line-clamp-2', n.content.replace(/#/g, ''))
+                : ''
             ),
-            h('div.text-base.font-semibold.text-white.line-clamp-2', n.title),
-            n.content
-              ? h('div.text-sm.text-gray-300.line-clamp-2', n.content.replace(/#/g, ''))
-              : ''
-          ),
-          h('div[slot=footer].flex.justify-end.mt-2',
-            h('sl-button', { variant: 'default', size: 'small' }, 'Read more')
+            h('div[slot=footer].flex.justify-end.mt-2',
+              h('sl-button', { variant: 'default', size: 'small' }, 'Read more')
+            )
           )
+        );
+      })
+    ),
+    hasMore
+      ? h(
+          'div.flex.justify-center.mt-8',
+          h('sl-button', { href: '/notices', variant: 'default', size: 'medium' }, 'View all notices →')
         )
-      );
-    })
+      : ''
   );
 }
 
@@ -358,10 +372,10 @@ function intro(notices: Notice[]) {
         )
       )),
 
-      // News
-      h('section#news.py-16', container(
+      // Notices
+      h('section#notices.py-16', container(
         h('div',
-          sectionTitle('News', 'Updates, releases, and community highlights.'),
+          sectionTitle('Notices', 'Updates, releases, and community highlights.'),
           newsCards(notices)
         )
       )),

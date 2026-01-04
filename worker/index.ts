@@ -1,6 +1,7 @@
 import { dashboard } from "./pages/dashboard";
 import { intro } from "./pages/intro";
 import { notice } from "./pages/notice";
+import { notices } from "./pages/notices";
 import { Notice } from "./types/notice";
 
 export default {
@@ -14,6 +15,11 @@ export default {
 
     if (url.pathname === '/dashboard') {
       return new Response(dashboard(), { headers: { 'Content-Type': 'text/html' } });
+    }
+
+    if (url.pathname === '/notices') {
+      const noticeList: Notice[] = await (env.API_WORKER as any).fetchNotices();
+      return new Response(notices(noticeList), { headers: { 'Content-Type': 'text/html' } });
     }
 
     if (url.pathname.startsWith("/notice/")) {

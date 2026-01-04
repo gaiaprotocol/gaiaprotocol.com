@@ -129,7 +129,7 @@ function breadcrumb(n: Notice) {
       'sl-breadcrumb',
       { class: 'text-sm' },
       h('sl-breadcrumb-item', { href: '/' }, 'Home'),
-      h('sl-breadcrumb-item', { href: '/#news' }, 'News'),
+      h('sl-breadcrumb-item', { href: '/notices' }, 'Notices'),
       h(
         'sl-breadcrumb-item',
         {
@@ -152,7 +152,7 @@ function shareRow(n: Notice) {
     'div.mt-8.flex.items-center.justify-between',
     h(
       'div.flex.items-center.gap-2',
-      h('sl-button', { href: '/#news', variant: 'default' }, '← Back to News')
+      h('sl-button', { href: '/notices', variant: 'default' }, '← Back to Notices')
     ),
     h(
       'div.flex.items-center.gap-2',
@@ -172,7 +172,7 @@ function shareRow(n: Notice) {
 
 
 function notice(n: Notice) {
-  const pageTitle = n?.title ? `${n.title} - Gaia Protocol News` : 'Notice - Gaia Protocol News';
+  const pageTitle = n?.title ? `${n.title} - Gaia Protocol` : 'Notice - Gaia Protocol';
 
   return (
     '<!DOCTYPE html>' +
