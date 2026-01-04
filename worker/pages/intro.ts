@@ -45,25 +45,25 @@ function protocolCards() {
       title: 'Material Factory',
       desc: 'An ERC-20 based system for tokenizing game resources with automated pricing based on supply and demand.',
       cover: '/images/covers/material-factory.jpg',
-      url: 'https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/gaming/MaterialFactory.sol',
+      url: 'https://github.com/gaiaprotocol/protocol/blob/main/src/gaming/MaterialFactory.sol',
     },
     {
       title: 'Topic Shares',
       desc: 'A tokenized system for subject-based participation where share holders receive fees and influence decisions.',
       cover: '/images/covers/topic-shares.jpg',
-      url: 'https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/TopicShares.sol',
+      url: 'https://github.com/gaiaprotocol/protocol/blob/main/src/social/TopicShares.sol',
     },
     {
       title: 'Clan Emblems',
       desc: 'Digital insignia representing community membership; trading fees contribute to clan operations.',
       cover: '/images/covers/clan-emblems.jpg',
-      url: 'https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/ClanEmblems.sol',
+      url: 'https://github.com/gaiaprotocol/protocol/blob/main/src/social/ClanEmblems.sol',
     },
     {
       title: 'Persona Fragments',
       desc: 'Tokenizes digital identity & relationships; users connect via fragment ownership.',
       cover: '/images/covers/persona-fragments.jpg',
-      url: 'https://github.com/gaiaprotocol/gaiaprotocol/blob/main/contracts/social/PersonaFragments.sol',
+      url: 'https://github.com/gaiaprotocol/protocol/blob/main/src/social/PersonaFragments.sol',
     },
   ];
 
