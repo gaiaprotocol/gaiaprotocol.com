@@ -122,6 +122,13 @@ function appsCards() {
       testnet: 'https://testnet.valhalla.gaia.cc'
     },
     {
+      title: 'Valhalla',
+      desc: 'An exclusive messenger for holders with verified communication.',
+      cover: '/images/covers/valhalla.jpg',
+      url: 'https://valhalla.gaia.cc',
+      testnet: 'https://testnet.valhalla.gaia.cc'
+    },
+    {
       title: 'Gaia Names',
       desc: 'A naming system for the Gaia ecosystem.',
       cover: '/images/covers/gaia-names.png',
